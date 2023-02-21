@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Tic Tac Toe</title>
 </head>
 <body>
     <div id="container">
-        <h1>Tic Tac Toe</h1>
-        <div class="rules">Game Rules</div>
-        <div id="gameboard"></div>
-            <div class="box" id="0">X</div>
-            <div class="box" id="0">O</div>
-            <div class="box" id="0">X</div>
-            <div class="box" id="0">O</div>
-            <div class="box" id="0">X</div>
-            <div class="box" id="0">O</div>
-            <div class="box" id="0">X</div>
-            <div class="box" id="0">O</div>
-            <div class="box" id="0">X</div>
+        <div class="gameArea"></div>
+            <div class="rules"><h2>Game Rules</h2>
+                <p>The object of Tic Tac Toe is to get three in a row. 
+                    You play on a three by three game board. The first player is known as  
+                    Player X and the second is Player O. Players alternate placing X's and O's 
+                    on the game board until either opponent has three in a row or all nine squares are filled. 
+                    Player X always goes first, and in the event that no one has three in a row, the stalemate 
+                    is called a cat game.
+                </p>
+            </div>
+            <div id="gameboard">
+                <h1>Tic Tac Toe</h1>
+                <div class="box" id="0">X</div>
+                <div class="box" id="1">O</div>
+                <div class="box" id="2">X</div>
+                <div class="box" id="3">O</div>
+                <div class="box" id="4">X</div>
+                <div class="box" id="5">O</div>
+                <div class="box" id="6">X</div>
+                <div class="box" id="7">O</div>
+                <div class="box" id="8">X</div>
+            </div>
+            <div class="sideImg"><img src="assets/images/chalk_hand.png" alt=""></div>
+        </div> 
+        <div class="playerArea">
+            <div class="playerX">Player X</div>
+            <button id="restetBtn">RESET</button>   
+            <div class="playerO">Player O</div>
         </div>
-        <div class="playerX">Player X</div>
-        <button id="restetBtn">RESET</button>   
-        <div class="playerO">Player O</div>
-        <div class="sideImg"><img src="assets/images/chalk_small.png" alt="Chalk stick"></div>
+        <footer id="footer">
+
+        </footer>
     </div>
     
 

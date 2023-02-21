@@ -5,14 +5,75 @@
   }
   
   body {
-    font-family:;
     background: url(/assets/images/green_board.jpg) no-repeat center center fixed;
     background-color: rgb(84,122,135);
     background-size: cover;
     height: 100%;
     overflow: hidden;
+    font-family: 'Caveat Brush', cursive, sans-serif;
+    color: white;
   }
 
-  .sideImg {
-   
+  #container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .rules {
+    background-color: gray;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  #gameboard {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: red;
+  }
+
+  #gameboard>h1 {
+    width: 100%;
+    font-size: 50px;
+  }
+
+  .box {
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+  }
+
+  .playerArea {
+    display: flex;
+  }
+
+  .playerX {
+  
+  }
+
+  #restetBtn {
+    
+  }
+
+  .playerO {
+    
+  }
+
+  .sideImg img {
+    width: 20vw;
+    height: auto;
+  }
+
+  #footer {
+    background-color: green;
+    width: 100vw;
+    height: 200px;
   }
