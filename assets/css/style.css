@@ -113,5 +113,8 @@
     width: 100vw;
     height: 150px;
     background: url(/assets/images/wood_board.jpg);
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
   }
