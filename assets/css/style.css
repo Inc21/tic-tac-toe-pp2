@@ -8,21 +8,20 @@
     background: url(/assets/images/green_board.jpg) no-repeat center center fixed;
     background-color: rgb(84,122,135);
     background-size: cover;
-    height: 100%;
-    overflow: hidden;
     font-family: 'Caveat Brush', cursive, sans-serif;
-    color: white;
+    color: #f5f5f5;
+    text-shadow: 1px 2px black;
   }
 
   /* Main container */
 
   #container {
-    height: 100vh;
-    width: 100vw;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: start;
     align-items: center;
+    min-height: 81.7vh;
 
   }
 
@@ -33,19 +32,24 @@
     text-align: center;
     font-size: 25px;
     letter-spacing: 2px;
-    text-shadow: 0px 3px black;
+    margin-top: 50px;
   }
 
-  #gameboard {
+  .sideImg img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  #gameBoard {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     text-align: center;
     justify-content: center;
     width: 500px;
     height: 500px;
   }
 
-  #gameboard>h1 {
+  #gameBoard>h1 {
     width: 100%;
     font-size: 50px;
   }
@@ -54,7 +58,6 @@
     width: 150px;
     height: 150px;
     font-size: 100px;
-    /* border: 2px solid white; */
   }
 
   #b0 {
@@ -97,23 +100,10 @@
 
   .playerArea {
     display: flex;
-  }
-
-  .playerX {
-  
-  }
-
-  #restetBtn {
-    
-  }
-
-  .playerO {
-    
-  }
-
-  .sideImg img {
-    width: 20vw;
-    height: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-grow: 1;
+    /* max-width: 700px; */
   }
 
   /* Footer area */
@@ -121,5 +111,7 @@
   body footer {
     background-color: green;
     width: 100vw;
-    height: 200px;
+    height: 150px;
+    background: url(/assets/images/wood_board.jpg);
+    
   }
