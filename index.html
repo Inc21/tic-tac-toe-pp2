@@ -17,9 +17,9 @@
 </head>
 <body>
     <div id="container">
-        <div class="gameArea"></div>
-            <div class="rules"><h2><i class="fa-regular fa-pen-to-square"></i> Game Rules</h2>
-                <p>The object of Tic Tac Toe is to get three in a row. 
+        <div class="gameArea">
+            <div class="rules"><button id="rulesBtn" onclick="showHide()">Hide Rules</button>
+                <p id="gameRules">The object of Tic Tac Toe is to get three in a row. 
                     You play on a three by three game board. The first player is known as  
                     Player X and the second is Player O. Players alternate placing X's and O's 
                     on the game board until either opponent has three in a row or all nine squares are filled. 
@@ -28,18 +28,18 @@
                 </p>
             </div>
             <div id="gameBoard">
-                <h1>Tic Tac Toe</h1>
-                <div class="box" id="b0">X</div>
-                <div class="box" id="b1">O</div>
-                <div class="box" id="b2">X</div>
-                <div class="box" id="b3">O</div>
-                <div class="box" id="b4">X</div>
-                <div class="box" id="b5">O</div>
-                <div class="box" id="b6">X</div>
-                <div class="box" id="b7">O</div>
-                <div class="box" id="b8">X</div>
+                <h1>Tic-Tac-Toe</h1>
+                <div class="box" id="b0"></div>
+                <div class="box" id="b1"></div>
+                <div class="box" id="b2"></div>
+                <div class="box" id="b3"></div>
+                <div class="box" id="b4"></div>
+                <div class="box" id="b5"></div>
+                <div class="box" id="b6"></div>
+                <div class="box" id="b7"></div>
+                <div class="box" id="b8"></div>
             </div>
-            <div class="sideImg"><img src="assets/images/chalk_hand.png" alt=""></div>
+            <div class="sideImg"><img src="/assets/images/chalk_hand.png" alt=""></div>
         </div> 
         <div class="playerArea">
             <div class="playerX">Player X</div>
