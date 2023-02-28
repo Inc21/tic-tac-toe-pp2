@@ -15,11 +15,15 @@ const player = new Object;
 compBtn.addEventListener("click", function() {
     OPPONENT = "computer";
     switchActive(friendBtn, compBtn);
+    this.classList.remove("noSelect");
+    friendBtn.classList.remove("noSelect");
 });
 
 friendBtn.addEventListener("click", function() {
    OPPONENT = "friend";
    switchActive(compBtn, friendBtn);
+   this.classList.remove("noSelect");
+   compBtn.classList.remove("noSelect");
 });
 
 xBtn.addEventListener("click", function() {
@@ -27,6 +31,8 @@ xBtn.addEventListener("click", function() {
     player.computer = "O";
     player.friend = "O";
     switchActive(oBtn, xBtn);
+    this.classList.remove("noSelect");
+    oBtn.classList.remove("noSelect");
 });
 
 oBtn.addEventListener("click", function() {
@@ -34,12 +40,26 @@ oBtn.addEventListener("click", function() {
     player.computer = "X";
     player.friend = "X";
     switchActive(xBtn, oBtn);
+    this.classList.remove("noSelect");
+    xBtn.classList.remove("noSelect");
 });
 
 playBtn.addEventListener("click", function() {
+    if( !OPPONENT){
+        compBtn.classList.add("noSelect");
+        friendBtn.classList.add("noSelect");
+        return;
+    } 
 
+    if( !player.man){
+        xBtn.classList.add("noSelect");
+        oBtn.classList.add("noSelect");
+        return;
+    }
+
+    // run game
     init(player, OPPONENT);
-    options.classList.add("hide");
+    options.classList.add("active");
 });
 
 // add/remove .active on option elements

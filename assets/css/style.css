@@ -181,14 +181,20 @@
     margin-top: 2rem;
   }
 
+  
+
+  /* game over area */
+
   .active {
     background-color: rgba(78, 53, 36, 0.5);
   }
 
-  /* game over area */
-
   .hide {
     visibility: hidden;
+}
+
+.noSelect {
+  background-color: rgba(255, 0, 0, 0.5);
 }
 
   /* Footer area */
