@@ -3,11 +3,11 @@ function showHide() {
     let rule = document.getElementById("gameRules");
     let btn = document.getElementById("rulesBtn");
     
-    if(rule.style.display === "none") {
-        rule.style.display = "block";
+    if(rule.style.visibility === "hidden") {
+        rule.style.visibility = "visible";
         btn.innerHTML = "Hide Rules";
     } else {
-        rule.style.display = "none";
+        rule.style.visibility = "hidden";
         btn.innerHTML = "Show Rules"
     }
 }

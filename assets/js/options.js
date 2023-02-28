@@ -1,5 +1,5 @@
 // get elements
-const options = document.getElementsByClassName("options");
+const options = document.getElementById("optionArea");
 const gameOverArea = document.getElementsByClassName("gameOver");
 const compBtn = document.getElementById("computer");
 const friendBtn = document.getElementById("friend");
@@ -37,7 +37,9 @@ oBtn.addEventListener("click", function() {
 });
 
 playBtn.addEventListener("click", function() {
-    
+
+    init(player, OPPONENT);
+    options.classList.add("hide");
 });
 
 // add/remove .active on option elements

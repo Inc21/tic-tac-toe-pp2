@@ -144,14 +144,14 @@
 
   /* options area */
 
-  .optionArea {
+  #optionArea {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
 
-  .optionArea h2 {
+  #optionArea h2 {
     letter-spacing: 3px;
     font-size: 2.5rem;
   }
@@ -188,7 +188,7 @@
   /* game over area */
 
   .hide {
-    display: none;
+    visibility: hidden;
 }
 
   /* Footer area */
