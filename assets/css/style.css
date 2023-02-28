@@ -165,6 +165,14 @@
     letter-spacing: 2px;
     background-color: rgba(177, 181, 247, 0.2);
     cursor: pointer;
+    box-shadow: 1px 1px #3C3F42;
+  }
+
+  .optBtn:hover {
+    background-color: rgba(78, 53, 36, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0px 5px #3C3F42;
+    transition: 200ms;
   }
 
   #playBtn {
@@ -176,6 +184,12 @@
   .active {
     background-color: rgba(78, 53, 36, 0.5);
   }
+
+  /* game over area */
+
+  .hide {
+    display: none;
+}
 
   /* Footer area */
 
