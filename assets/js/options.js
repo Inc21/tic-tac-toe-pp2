@@ -14,24 +14,34 @@ const player = new Object;
 // add event listeners to the buttons
 compBtn.addEventListener("click", function() {
     OPPONENT = "computer";
+    switchActive(friendBtn, compBtn);
 });
 
 friendBtn.addEventListener("click", function() {
    OPPONENT = "friend";
+   switchActive(compBtn, friendBtn);
 });
 
 xBtn.addEventListener("click", function() {
     player.man = "X";
     player.computer = "O";
     player.friend = "O";
+    switchActive(oBtn, xBtn);
 });
 
 oBtn.addEventListener("click", function() {
     player.man = "O";
     player.computer = "X";
     player.friend = "X";
+    switchActive(xBtn, oBtn);
 });
 
 playBtn.addEventListener("click", function() {
     
 });
+
+// add/remove .active on option elements
+function switchActive(off, on) {
+    off.classList.remove("active");
+    on.classList.add("active");
+}
