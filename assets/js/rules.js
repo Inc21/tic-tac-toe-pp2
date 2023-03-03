@@ -1,13 +1,14 @@
 // Function to hide the rules
 function showHide() {
-    let rule = document.getElementById("gameRules");
+    let rule = document.querySelector(".gameRules");
     let btn = document.getElementById("rulesBtn");
     
-    if(rule.style.visibility === "hidden") {
-        rule.style.visibility = "visible";
-        btn.innerHTML = "Hide Rules";
+    if(rule.style.display === "block") {
+        rule.style.display = "none";
+        btn.innerHTML = "Show Rules";
     } else {
-        rule.style.visibility = "hidden";
-        btn.innerHTML = "Show Rules"
+        rule.style.display = "block";
+        btn.innerHTML = "Hide Rules"
+        rule.classList.remove("hide");
     }
 }
