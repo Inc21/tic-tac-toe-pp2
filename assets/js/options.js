@@ -6,6 +6,7 @@ const friendBtn = document.getElementById("friend");
 const xBtn = document.getElementById("xBtn");
 const oBtn = document.getElementById("oBtn");
 const playBtn = document.getElementById("playBtn");
+const gameOverElement = document.querySelector(".gameOver");
 
 // variables for options
 let OPPONENT;
@@ -59,7 +60,7 @@ playBtn.addEventListener("click", function() {
 
     // run game
     init(player, OPPONENT);
-    options.classList.add("active");
+    options.classList.add("visible");
 });
 
 // add/remove .active on option elements
