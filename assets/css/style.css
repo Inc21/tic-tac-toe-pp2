@@ -85,7 +85,7 @@
     transform: translateY(4px);
   }
 
-  #gameBoard {
+  .gameBoard {
     display: flex;
     flex-flow: row wrap;
     text-align: center;
@@ -94,7 +94,7 @@
     height: 500px;
   }
 
-  #gameBoard>h1 {
+  .gameBoard>h1 {
     width: 100%;
     font-size: 50px;
     letter-spacing: 5px;
@@ -145,7 +145,7 @@
 
   /* options area */
 
-  #optionArea {
+  .optionArea {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,7 +153,7 @@
     position: relative;
   }
 
-  #optionArea h2 {
+  .optionArea h2 {
     letter-spacing: 3px;
     font-size: 2.5rem;
   }

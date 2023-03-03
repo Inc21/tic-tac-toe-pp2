@@ -1,5 +1,6 @@
 function init(player, OPPONENT) {
     let boxes = Array.from(document.getElementsByClassName("box"));
+    const gameBoard = document.querySelector(".gameBoard");
     const spaces = [];
     // const O = "O";
     // const X = "X";
@@ -157,9 +158,11 @@ function init(player, OPPONENT) {
 
         gameOverElement.innerHTML = `
         <h1>${message}</h1>
+        <h1>${player}</h1>
         <div class="play" onclick="location.reload()">Play Again</div>
         `;
 
         gameOverElement.classList.remove("hide");
+        gameBoard.classList.add("hide");
     }
 }
