@@ -122,7 +122,8 @@
     border-radius: 10px;
     padding: 1vw 7vw;
     font-size: clamp(1.5rem, 2vw, 2rem);
-    margin-top: 2rem;
+    margin-top: 1rem;
+    color: lightgray;
   }
 
   #rulesBtn {

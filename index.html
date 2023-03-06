@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Tic Tac Toe</title>
 </head>
-<body>
+<body onload="blink();">
     <div id="container">
         <h1>Tic-Tac-Toe</h1>
             <div  class="gameBoard hide">
@@ -31,6 +31,7 @@
             </div>
             <div class="optionArea">
                 <h2>Choose your opponent</h2>
+                <h2 id="blink"><i class="fa-solid fa-circle-down"></i></h2>
                 <div class="optBtn" id="computer">COMPUTER</div>  
                 <div class="optBtn" id="friend">FRIEND</div>
                 <h2>Choose your weapon</h2>
@@ -38,8 +39,7 @@
                 <div class="optBtn" id="oBtn">O</div>
                 <button id="playBtn">PLAY!</button>
             </div>
-            <div class="gameOver hide"></div>
-            
+            <div class="gameOver hide"></div>   
         </div>
         <div class="rules">
             <button id="rulesBtn" onclick="showHide()">Show Rules</button>

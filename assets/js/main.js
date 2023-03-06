@@ -204,3 +204,12 @@ function init(player, OPPONENT) {
         gameBoard.classList.add("hide");
     }
 }
+
+// Blinking arrow
+function blink() {
+    if(document.getElementById("blink")) {
+        let b = document.getElementById("blink");
+        b.style.color = (b.style.color == "lightgray" ? "white" : "lightgray");
+        setTimeout("blink()", 1100);
+    }
+}
