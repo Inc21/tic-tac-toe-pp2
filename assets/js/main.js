@@ -27,14 +27,13 @@ function init(player, OPPONENT) {
 
                 if(GAME_OVER) return;
 
-                e.target.innerText = currentPlayer;
-
-
-
                 if(gameData[id]) return;
+
+                e.target.innerText = currentPlayer;
                 
                 
                 gameData[id] = currentPlayer;
+                
                 
                 // check for win
                 if(isWinner(gameData, currentPlayer)){
@@ -49,7 +48,7 @@ function init(player, OPPONENT) {
                     GAME_OVER = true;
                     return;
                 }
-
+                
                 if (OPPONENT == "computer") {
                     // for(i = 0; i < boxes.length; i++){
                     //     box[i].addEventListener("click", function(event){
@@ -57,9 +56,13 @@ function init(player, OPPONENT) {
                     //         console.log(id);
                     // });
                     let id = minimax( gameData, player.computer ).id;
-                    
+
+                    boxes[id].innerText = player.computer;
+            
                     gameData[id] = player.computer;
-                    // event.target.innerText = player.computer;
+                    
+                    
+                   
 
                     // check for win
                     if(isWinner(gameData, player.computer)){
@@ -87,13 +90,13 @@ function init(player, OPPONENT) {
             
             // minimax function
     function minimax(gameData, PLAYER) {
-        if (isWinner(gameData, player.computer) ) return { evaluation : +10 };
-        if (isWinner(gameData, player.man)      ) return { evaluation : -10 };
-        if (isDraw(gameData)                    ) return { evaluation : 0 };
+        if (isWinner(gameData, player.computer) ) return { evaluation: +10 };
+        if (isWinner(gameData, player.man)      ) return { evaluation: -10 };
+        if (isDraw(gameData)                    ) return { evaluation: 0 }; 
 
         // empty spaces
         let EMPTY_SPACES = getEmptySpaces(gameData);
-        console.log(getEmptySpaces(gameData));
+        
         
         // save all moves and their evaluations
         let moves = [];
@@ -140,29 +143,29 @@ function init(player, OPPONENT) {
                 }
             }
         }else{
-            if(PLAYER == player.computer) {
+            
                 // minimizer
                 let bestEvaluation = +Infinity;
                 for(let i = 0; i < moves.length; i++){
                     if(moves[i].evaluation < bestEvaluation) {
                         bestEvaluation = moves[i].evaluation;
                         bestMove = moves[i]; 
-                    }
-                }
+                }   
             }
-
-            return bestMove;
         }
+        return bestMove;
     }
 
     // get empty spaces
-    function getEmptySpaces (gameData) {
+    function getEmptySpaces(gameData){
         let EMPTY = [];
-
+        console.log(EMPTY);
         for(let id = 0; id < gameData.length; id++) {
-            if(!gameData[id]) EMPTY.push(id);
-            console.log(EMPTY);
+            if(!gameData[id]) {
+                EMPTY.push(id)
+            };
         }
+        // console.log(EMPTY);
         return EMPTY;
         
     }
