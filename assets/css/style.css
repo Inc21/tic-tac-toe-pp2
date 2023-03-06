@@ -12,6 +12,7 @@
     color: #f5f5f5;
     text-shadow: 2px 3px #3C3F42;
     height: 100%;
+    text-align: center;
   }
 
   h1 {
@@ -26,13 +27,21 @@
   #container {
     display: flex;
     flex-flow: column wrap;
-    min-height: 100vh;
-    gap: 1.5rem;
+    min-width: 100vw;
     position: absolute;
-    margin: 0 auto;
-    /* justify-content: space-evenly; */
+    /* margin: 0 auto; */
+    align-items: center;
+    /* justify-content: center; */
     /* align-content: center; */
-    
+  }
+
+  .gameBoard {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+    max-width: 500px;
   }
 
    /* Game area */
@@ -48,9 +57,9 @@
    } */
 
   .rules {
-    max-width: 290px;
+    width: 99vw;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     /* background-color: rgba(83,86,91,0.5); */
   }
@@ -93,19 +102,11 @@
     transform: translateY(4px);
   }
 
-  .gameBoard {
-    display: flex;
-    flex-flow: row wrap;
-    text-align: center;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
-  }
-
   .box {
     width: 150px;
     height: 150px;
     font-size: 100px;
+    margin: 0;
   }
 
   [id="0"] {

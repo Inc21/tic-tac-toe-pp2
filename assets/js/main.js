@@ -50,11 +50,6 @@ function init(player, OPPONENT) {
                 }
                 
                 if (OPPONENT == "computer") {
-                    // for(i = 0; i < boxes.length; i++){
-                    //     box[i].addEventListener("click", function(event){
-                    //         id = event.target.id;
-                    //         console.log(id);
-                    // });
                     let id = minimax( gameData, player.computer ).id;
 
                     boxes[id].innerText = player.computer;
@@ -159,15 +154,12 @@ function init(player, OPPONENT) {
     // get empty spaces
     function getEmptySpaces(gameData){
         let EMPTY = [];
-        console.log(EMPTY);
         for(let id = 0; id < gameData.length; id++) {
             if(!gameData[id]) {
                 EMPTY.push(id)
             };
         }
-        // console.log(EMPTY);
-        return EMPTY;
-        
+        return EMPTY;   
     }
     
    function isWinner(gameData, player){
