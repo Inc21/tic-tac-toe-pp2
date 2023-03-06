@@ -12,7 +12,7 @@ function showHide() {
         rule.style.display = "block";
         btn.innerHTML = "Hide Rules"
         rule.classList.remove("hide");
-        cont.style.minHeight = "auto";
+        // cont.style.minHeight = "auto";
         // rule.style.marginTop = "-120px";
         // btn.style.margin = "-520px";
     }

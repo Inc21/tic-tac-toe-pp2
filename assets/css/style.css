@@ -12,6 +12,8 @@
     color: #f5f5f5;
     text-shadow: 2px 3px #3C3F42;
     text-align: center;
+    height: 100%;
+    width: 100%;
   }
 
   h1 {
@@ -113,17 +115,29 @@
     letter-spacing: 2px;
   }
 
-  .rules > p {
-    background-color: rgba(78, 53, 36, 0.3);
+  .rules  ul {
+    background-color: rgba(71, 71, 71, 0.9);
     border-radius: 10px;
-    padding: 1vw 7vw;
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    margin-top: 1rem;
+    padding: 2rem;
+    font-size: clamp(1rem, 2.5vw, 3.5rem);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+
+  .rules ul li {
+    padding: 1rem;
   }
 
   #rulesBtn {
+    position: relative;
     margin: 1rem;
     margin-right: 2rem;
+    z-index: 9999;
   }
 
   button {
