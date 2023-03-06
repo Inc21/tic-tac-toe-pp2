@@ -2,10 +2,10 @@
 
 some text
 
-The link to the live website can be found [here.](https://inc21.github.io)
+The link to the live website can be found [here.](https://inc21.github.io/tic-tac-toe-pp2/)
 
 
-![Image to show page responsivness on smaller screens.](/assets/)
+![Image to show page responsiveness on smaller screens.](/assets/)
 
 
 # User Stories
@@ -219,13 +219,13 @@ After rigorous testing with various online tools and my limited testing with dif
 
  The steps to deploy are as follows: 
   - On my [GitHub](https://github.com/Inc21) profile page, top centre of the screen click on repositories.
-  - Click on blarney_cc_pp1
-  - In the blarney_cc_pp1 repository, navigate to the Settings tab.
+  - Click on tic-tac-toe-pp2
+  - In the tic-tac-toe-pp2 repository, navigate to the Settings tab.
   - Menu list on the left of the screen, navigate to the pages tab. 
   - From the GitHub pages, branch section drop-down menu, select the main Branch and hit the save button.
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://inc21.github.io
+The live link can be found here - https://inc21.github.io/tic-tac-toe-pp2/
 
 ### Local Deployment
 The steps to deploy are as follows:

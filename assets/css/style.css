@@ -5,7 +5,7 @@
   }
   
   body {
-    background: url(/assets/images/green_board.jpg) no-repeat center center fixed;
+    background: url(../images/green_board.jpg) no-repeat center center fixed;
     background-color: rgb(84,122,135);
     background-size: cover;
     font-family: 'Caveat Brush', cursive, sans-serif;
@@ -136,7 +136,8 @@
     height: 3.5rem;
     padding: 5px 20px;
     letter-spacing: 5px;
-    background: url(/assets/images/wood_board.jpg);
+    background: url(../images/wood_board.jpg);
+    background-color: burlywood;
     color: #f5f5f5;
     border: 2px solid rgba(78, 53, 36, 0.5);
     text-shadow: inherit;
@@ -217,7 +218,8 @@
     width: 18rem;
     padding: 5px 20px;
     letter-spacing: 5px;
-    background: url(/assets/images/wood_board.jpg);
+    background: url(../images/wood_board.jpg);
+    background-color: burlywood;
     color: #f5f5f5;
     border: 2px solid rgba(78, 53, 36, 0.5);
     text-shadow: inherit;
@@ -255,11 +257,10 @@
   /* Footer area */
 
   #footer {
-    background-color: burlywood;
     width: 100vw;
     height: 9rem;
-    background: url(/assets/images/wood_board.jpg);
-    background-color: rgba(78, 53, 36, 0.7);
+    background: url(../images/wood_board.jpg);
+    background-color: burlywood;
     display: flex;
     justify-content: center;
     align-items: center;
