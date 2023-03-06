@@ -7,6 +7,7 @@ const xBtn = document.getElementById("xBtn");
 const oBtn = document.getElementById("oBtn");
 const playBtn = document.getElementById("playBtn");
 const gameOverElement = document.querySelector(".gameOver");
+const gameBoard = document.querySelector(".gameBoard");
 
 // variables for options
 let OPPONENT;
@@ -61,6 +62,8 @@ playBtn.addEventListener("click", function() {
     // run game
     init(player, OPPONENT);
     options.classList.add("hide");
+    gameBoard.classList.remove("hide");
+
 });
 
 // add/remove .active on option elements
