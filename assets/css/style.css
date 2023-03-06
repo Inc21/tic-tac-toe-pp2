@@ -5,7 +5,7 @@
   }
   
   body {
-    background: url(../images/green_board.jpg) no-repeat center center fixed;
+    background: url(../images/green_board.webp) no-repeat center center fixed;
     background-color: rgb(84,122,135);
     background-size: cover;
     font-family: 'Caveat Brush', cursive, sans-serif;
@@ -31,8 +31,6 @@
       min-height: calc(100vh - 14.5rem);
       align-items: center;
       gap: 2rem;
-      /* justify-content: center; */
-      /* align-content: center; */
     }
 
     /* Draw game board and boxes on the screen */
@@ -44,9 +42,7 @@
       /* text-align: center; */
       justify-content: center;
       width: 510px;
-      height: 510px;
-    
-      
+      height: 510px; 
     }
 
     .box {
@@ -149,7 +145,7 @@
     height: 3.5rem;
     padding: 5px 20px;
     letter-spacing: 5px;
-    background: url(../images/wood_board.jpg);
+    background: url(../images/wood_board.webp);
     background-color: burlywood;
     color: #f5f5f5;
     border: 2px solid rgba(78, 53, 36, 0.5);
@@ -169,7 +165,6 @@
     box-shadow: 0px 3px #3C3F42;
     transform: translateY(4px);
   }
-
 
   /* options area */
 
@@ -231,7 +226,7 @@
     width: 18rem;
     padding: 5px 20px;
     letter-spacing: 5px;
-    background: url(../images/wood_board.jpg);
+    background: url(../images/wood_board.webp);
     background-color: burlywood;
     color: #f5f5f5;
     border: 2px solid rgba(78, 53, 36, 0.5);
@@ -272,7 +267,7 @@
   #footer {
     width: 100vw;
     height: 9rem;
-    background: url(../images/wood_board.jpg);
+    background: url(../images/wood_board.webp);
     background-color: burlywood;
     display: flex;
     justify-content: center;
@@ -280,9 +275,6 @@
     font-size: clamp(40px, 6vw, 60px);
     border-top: 5px solid rgba(78, 53, 36, 0.7);
     text-decoration: none;
-    
-  
-    
   }
 
   footer > div > a {
@@ -292,7 +284,6 @@
   }
 
   footer > div > a :hover {
-    /* font-size: 70px; */
     text-shadow: 5px 5px #3C3F42;
     transition: 200ms;
     transform: scale(1.1);
