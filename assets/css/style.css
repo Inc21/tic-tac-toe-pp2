@@ -11,7 +11,6 @@
     font-family: 'Caveat Brush', cursive, sans-serif;
     color: #f5f5f5;
     text-shadow: 2px 3px #3C3F42;
-    height: 100%;
     text-align: center;
   }
 
@@ -27,9 +26,7 @@
     #container {
       display: flex;
       flex-flow: column wrap;
-      min-height: calc(100vh - 13.5rem);
-      /* position: absolute; */
-      /* margin: 0 auto; */
+      min-height: calc(100vh - 14.5rem);
       align-items: center;
       gap: 2rem;
       /* justify-content: center; */
@@ -114,7 +111,6 @@
     width: 100vw;
     text-align: center;
     letter-spacing: 2px;
-    /* background-color: rgba(83,86,91,0.5); */
   }
 
   .rules > p {
@@ -123,11 +119,11 @@
     padding: 1vw 7vw;
     font-size: clamp(1.5rem, 2vw, 2rem);
     margin-top: 1rem;
-    color: lightgray;
   }
 
   #rulesBtn {
-    margin-bottom: 1rem;
+    margin: 1rem;
+    margin-right: 2rem;
   }
 
   button {
@@ -167,13 +163,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     position: relative;
   }
 
   .optionArea h2 {
     letter-spacing: 3px;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-transform: uppercase;
   }
 
   .optBtn {
@@ -196,14 +193,21 @@
   }
 
   #playBtn {
-    justify-self: center;
-    margin: 0 1rem;
-    margin-top: 2rem;
+    margin: 1rem;
   }
 
-  
-
   /* game over area */
+
+  .gameOver h1 {
+    font-size: clamp(1.5rem, 4vw, 10rem);
+    padding-bottom: 2rem;
+  }
+
+  .gameOver h2 {
+    font-size: clamp(1.5rem, 10vw, 30rem);
+    padding-bottom: 2rem;
+  }
+
  .play {
     font-size: 2rem;
     font-weight: bolder;

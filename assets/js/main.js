@@ -44,7 +44,7 @@ function init(player, OPPONENT) {
 
                 // check if draw
                 if(isDraw(gameData)){
-                    showGameOver("draw");
+                    showGameOver('<i class="fa-regular fa-face-frown"></i>');
                     GAME_OVER = true;
                     return;
                 }
@@ -68,7 +68,7 @@ function init(player, OPPONENT) {
 
                     // check if draw
                     if(isDraw(gameData)){
-                        showGameOver("draw");
+                        showGameOver('<i class="fa-regular fa-face-frown"></i>');
                         GAME_OVER = true;
                         return;
                     }
@@ -192,11 +192,11 @@ function init(player, OPPONENT) {
 
     // show game over
     function showGameOver(player) {
-        let message = player == "draw" ? "Oops No Winner" : "The Winner is";
+        let message = player == '<i class="fa-regular fa-face-frown"></i>' ? "It's a draw" : "<i class='fa-solid fa-trophy'></i> The Winner is";
 
         gameOverElement.innerHTML = `
         <h1>${message}</h1>
-        <h1>${player}</h1>
+        <h2>${player}</h2>
         <div class="play" onclick="location.reload()">Play Again</div>
         `;
 
@@ -209,7 +209,7 @@ function init(player, OPPONENT) {
 function blink() {
     if(document.getElementById("blink")) {
         let b = document.getElementById("blink");
-        b.style.color = (b.style.color == "lightgray" ? "white" : "lightgray");
+        b.style.color = (b.style.color == "lightsteelblue" ? "white" : "lightsteelblue");
         setTimeout("blink()", 1100);
     }
 }
