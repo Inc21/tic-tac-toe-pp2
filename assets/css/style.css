@@ -131,7 +131,7 @@
   #rulesBtn {
     position: relative;
     margin: 1rem;
-    margin-right: 2rem;
+    width: 18rem;
     z-index: 9999;
   }
 
