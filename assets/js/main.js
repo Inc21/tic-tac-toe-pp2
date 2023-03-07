@@ -52,8 +52,17 @@ function init(player, OPPONENT) {
                 if (OPPONENT == "computer") {
                     let id = minimax( gameData, player.computer ).id;
 
-                    boxes[id].innerText = player.computer;
-            
+                    // computer move delay from 0s to 1s
+                    
+                    setTimeout(timeOut, Math.floor(Math.random() * 1000 ));
+                
+                    function timeOut() {
+                        boxes[id].innerText = player.computer;
+                        
+                    }
+                
+                    
+                    
                     gameData[id] = player.computer;
                     
                     
@@ -76,13 +85,10 @@ function init(player, OPPONENT) {
                         // switch players
                         currentPlayer = currentPlayer == player.man ? player.friend : player.man;
                         
-                    }
-
-                
-                
+                    }      
             });
             };   
-            
+
             // minimax function
     function minimax(gameData, PLAYER) {
         if (isWinner(gameData, player.computer) ) return { evaluation: +10 };
@@ -91,7 +97,6 @@ function init(player, OPPONENT) {
 
         // empty spaces
         let EMPTY_SPACES = getEmptySpaces(gameData);
-        
         
         // save all moves and their evaluations
         let moves = [];
@@ -106,8 +111,7 @@ function init(player, OPPONENT) {
 
             // make the move for the player
             gameData[id] = PLAYER;
-          
-
+        
             // save the move id and evaluation
             let move = {};
             move.id = id;
