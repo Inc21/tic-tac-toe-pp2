@@ -23,30 +23,30 @@
     <div id="container">
         <h1><a href="index.html">Tic-Tac-Toe</a></h1>
         <div class="gameBoard hide">
-            <div class="box" id="0"></div>
-            <div class="box" id="1"></div>
-            <div class="box" id="2"></div>
-            <div class="box" id="3"></div>
-            <div class="box" id="4"></div>
-            <div class="box" id="5"></div>
-            <div class="box" id="6"></div>
-            <div class="box" id="7"></div>
-            <div class="box" id="8"></div>
+            <a href="#" aria-label="game board box" class="box" id="0"></a>
+            <a href="#" aria-label="game board box" class="box" id="1"></a>
+            <a href="#" aria-label="game board box" class="box" id="2"></a>
+            <a href="#" aria-label="game board box" class="box" id="3"></a>
+            <a href="#" aria-label="game board box" class="box" id="4"></a>
+            <a href="#" aria-label="game board box" class="box" id="5"></a>
+            <a href="#" aria-label="game board box" class="box" id="6"></a>
+            <a href="#" aria-label="game board box" class="box" id="7"></a>
+            <a href="#" aria-label="game board box" class="box" id="8"></a>
         </div>
         <div class="optionArea">
             <h2>Choose your opponent</h2>
             <div id="blink"><i class="fa-solid fa-circle-down"></i></div>
-            <div tabindex="0" class="optBtn" id="computer">COMPUTER</div>
-            <div tabindex="0" class="optBtn" id="friend">FRIEND</div>
+            <button class="optBtn" id="computer">COMPUTER</button>
+            <button class="optBtn" id="friend">FRIEND</button>
             <h2>Choose your weapon</h2>
-            <div tabindex="0" class="optBtn" id="xBtn">X</div>
-            <div tabindex="0" class="optBtn" id="oBtn">O</div>
-            <button id="playBtn">PLAY!</button>
+            <button class="optBtn" id="xBtn">X</button>
+            <button class="optBtn" id="oBtn">O</button>
+            <button class="woodButton" id="playBtn">PLAY!</button>
         </div>
         <div class="gameOver hide"></div>
     </div>
     <div class="rules">
-        <button id="rulesBtn" onclick="showHide()">Show Rules</button>
+        <button class="woodButton" id="rulesBtn" onclick="showHide()">Show Rules</button>
         <div class="gameRules hide">
             <ul>
                 <li>The object of Tic Tac Toe is to get three in a row.</li>

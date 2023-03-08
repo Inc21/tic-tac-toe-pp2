@@ -16,7 +16,7 @@ body {
     width: 100%;
 }
 
-:focus {
+:focus-visible {
     outline: #f5f5f5 solid 3px;
 }
 
@@ -48,7 +48,6 @@ h1 {
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    /* text-align: center; */
     justify-content: center;
     width: 510px;
     height: 510px;
@@ -123,7 +122,7 @@ h1 {
     background-color: rgba(71, 71, 71, 0.9);
     border-radius: 10px;
     padding: 2rem;
-    font-size: clamp(1rem, 2.5vw, 3.5rem);
+    font-size: clamp(1rem, 2vw, 2.5rem);
     text-align: center;
     position: fixed;
     top: 0;
@@ -134,7 +133,7 @@ h1 {
 }
 
 .rules ul li {
-    padding: 1rem;
+    padding: 5px;
 }
 
 #rulesBtn {
@@ -144,7 +143,7 @@ h1 {
     z-index: 9999;
 }
 
-button {
+.woodButton {
     font-size: 2rem;
     font-weight: bolder;
     border-radius: 1rem;
@@ -196,15 +195,18 @@ button:active {
 }
 
 .optBtn {
-    width: 150px;
+    width: 10rem;
     border: 1px solid #f5f5f5;
     font-size: 1.5rem;
+    font-weight: 600;
     text-align: center;
     border-radius: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     background-color: rgba(177, 181, 247, 0.2);
     cursor: pointer;
     box-shadow: 1px 1px #3C3F42;
+    font-family: inherit;
+    color: #f5f5f5;
 }
 
 .optBtn:hover {
@@ -212,10 +214,6 @@ button:active {
     transform: scale(1.05);
     box-shadow: 0px 5px #3C3F42;
     transition: 200ms;
-}
-
-#playBtn {
-    margin: 1rem;
 }
 
 /* game over area */

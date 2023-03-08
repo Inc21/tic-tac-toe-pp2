@@ -27,6 +27,7 @@ function init(player, OPPONENT) {
     box = boxes;
     for (i = 0; i < boxes.length; i++) {
         box[i].addEventListener("click", function (e) {
+    
             id = e.target.id;
 
             if (GAME_OVER) return;
@@ -199,7 +200,7 @@ function init(player, OPPONENT) {
         gameOverElement.innerHTML = `
         <h1>${message}</h1>
         <h2>${player}</h2>
-        <div tabindex="0" class="play" onclick="location.reload()">Play Again</div>
+        <button class="play woodButton" onclick="location.reload()">Play Again</button>
         `;
 
         gameOverElement.classList.remove("hide");
