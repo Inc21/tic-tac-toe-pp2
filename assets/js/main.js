@@ -201,7 +201,7 @@ function init(player, OPPONENT) {
         gameOverElement.innerHTML = `
         <h1>${message}</h1>
         <h2>${player}</h2>
-        <div class="play" onclick="location.reload()">Play Again</div>
+        <div tabindex="0" class="play" onclick="location.reload()">Play Again</div>
         `;
 
         gameOverElement.classList.remove("hide");
