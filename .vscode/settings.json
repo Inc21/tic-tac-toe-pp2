@@ -26,5 +26,14 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "cSpell.words": [
       "lightsteelblue"
-   ]
+   ],
+   "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[css]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+   }
 }

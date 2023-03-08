@@ -1,6 +1,6 @@
 // get elements
 const options = document.querySelector(".optionArea");
-const gameOverArea = document.getElementsByClassName("gameOver");
+// const gameOverArea = document.getElementsByClassName("gameOver");
 const compBtn = document.getElementById("computer");
 const friendBtn = document.getElementById("friend");
 const xBtn = document.getElementById("xBtn");
@@ -14,21 +14,21 @@ let OPPONENT;
 const player = new Object;
 
 // add event listeners to the buttons
-compBtn.addEventListener("click", function() {
+compBtn.addEventListener("click", function () {
     OPPONENT = "computer";
     switchActive(friendBtn, compBtn);
     this.classList.remove("noSelect");
     friendBtn.classList.remove("noSelect");
 });
 
-friendBtn.addEventListener("click", function() {
-   OPPONENT = "friend";
-   switchActive(compBtn, friendBtn);
-   this.classList.remove("noSelect");
-   compBtn.classList.remove("noSelect");
+friendBtn.addEventListener("click", function () {
+    OPPONENT = "friend";
+    switchActive(compBtn, friendBtn);
+    this.classList.remove("noSelect");
+    compBtn.classList.remove("noSelect");
 });
 
-xBtn.addEventListener("click", function() {
+xBtn.addEventListener("click", function () {
     player.man = "X";
     player.computer = "O";
     player.friend = "O";
@@ -37,7 +37,7 @@ xBtn.addEventListener("click", function() {
     oBtn.classList.remove("noSelect");
 });
 
-oBtn.addEventListener("click", function() {
+oBtn.addEventListener("click", function () {
     player.man = "O";
     player.computer = "X";
     player.friend = "X";
@@ -46,14 +46,14 @@ oBtn.addEventListener("click", function() {
     xBtn.classList.remove("noSelect");
 });
 
-playBtn.addEventListener("click", function() {
-    if( !OPPONENT){
+playBtn.addEventListener("click", function () {
+    if (!OPPONENT) {
         compBtn.classList.add("noSelect");
         friendBtn.classList.add("noSelect");
         return;
-    } 
+    }
 
-    if( !player.man){
+    if (!player.man) {
         xBtn.classList.add("noSelect");
         oBtn.classList.add("noSelect");
         return;

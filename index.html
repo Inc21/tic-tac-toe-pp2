@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keyword" content="Tic-Tac-Toe game that can be played against AI or a human">
-    <meta name="description" content="Simple and relaxing game that is well known and for all ages.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keyword" content="Tic-Tac-Toe game that can be played against AI or a human" />
+    <meta name="description" content="Simple and relaxing game that is well known and for all ages." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/64b115579c.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Tic Tac Toe</title>
 </head>
+
 <body onload="blink();">
     <div id="container">
         <h1><a href="index.html">Tic-Tac-Toe</a></h1>
-            <div  class="gameBoard hide">
-                <div class="box" id="0"></div>
-                <div class="box" id="1"></div>
-                <div class="box" id="2"></div>
-                <div class="box" id="3"></div>
-                <div class="box" id="4"></div>
-                <div class="box" id="5"></div>
-                <div class="box" id="6"></div>
-                <div class="box" id="7"></div>
-                <div class="box" id="8"></div>
-            </div>
-            <div class="optionArea">
-                <h2>Choose your opponent</h2>
-                <div id="blink"><i class="fa-solid fa-circle-down"></i></div>
-                <div tabindex="0" class="optBtn" id="computer">COMPUTER</div>  
-                <div tabindex="0" class="optBtn" id="friend">FRIEND</div>
-                <h2>Choose your weapon</h2>
-                <div tabindex="0" class="optBtn" id="xBtn">X</div>
-                <div tabindex="0"    class="optBtn" id="oBtn">O</div>
-                <button id="playBtn">PLAY!</button>
-            </div>
-            <div class="gameOver hide"></div>   
+        <div class="gameBoard hide">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
         </div>
-        <div class="rules">
-            <button id="rulesBtn" onclick="showHide()">Show Rules</button>
-            <div class="gameRules hide">
-                <ul>
-                    <li>The object of Tic Tac Toe is to get three in a row.</li>
-                    <li>You play on a three by three game board.</li>
-                    <li>Choose your opponent. Either computer to play against un-beatable AI or a friend.</li>
-                    <li>Choose your weapon. Pick what symbol you want to play with, X or O.</li>
-                    <li>Player always goes first.</li>
-                    <li>Players alternate placing X's and O's on the game board until either opponent has three in a row or all nine squares are filled</li>
-                    <li>in the event that no one has three in a row and all nine squares are filled, it's a draw.</li>
-                </ul>
-            </div>
+        <div class="optionArea">
+            <h2>Choose your opponent</h2>
+            <div id="blink"><i class="fa-solid fa-circle-down"></i></div>
+            <div tabindex="0" class="optBtn" id="computer">COMPUTER</div>
+            <div tabindex="0" class="optBtn" id="friend">FRIEND</div>
+            <h2>Choose your weapon</h2>
+            <div tabindex="0" class="optBtn" id="xBtn">X</div>
+            <div tabindex="0" class="optBtn" id="oBtn">O</div>
+            <button id="playBtn">PLAY!</button>
         </div>
-        <footer id="footer">
-            <div class="social">
-                <a class="wiki" href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank" rel="noopener" aria-label="Visit Tic Tac Toe's Wikipedia page (link opens in new tab)"><i class="fa-brands fa-wikipedia-w"></i></a>
-                <a class="github" href="https://github.com/Inc21/tic-tac-toe-pp2" target="_blank" rel="noopener" aria-label="Visit Tic Tac Toe's Github page (link opens in new tab)"><i class="fa-brands fa-github"></i></a>
-                <a class="linkedin" href="https://www.linkedin.com/in/indrek-mannik-038770259/" target="_blank" rel="noopener" aria-label="Visit Indrek Mannik's Linked In page (link opens in new tab)"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </footer>
-    
+        <div class="gameOver hide"></div>
+    </div>
+    <div class="rules">
+        <button id="rulesBtn" onclick="showHide()">Show Rules</button>
+        <div class="gameRules hide">
+            <ul>
+                <li>The object of Tic Tac Toe is to get three in a row.</li>
+                <li>You play on a three by three game board.</li>
+                <li>
+                    Choose your opponent. Either computer to play against un-beatable AI
+                    or a friend.
+                </li>
+                <li>
+                    Choose your weapon. Pick what symbol you want to play with, X or O.
+                </li>
+                <li>Player always goes first.</li>
+                <li>
+                    Players alternate placing X's and O's on the game board until either
+                    opponent has three in a row or all nine squares are filled
+                </li>
+                <li>
+                    in the event that no one has three in a row and all nine squares are
+                    filled, it's a draw.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="social">
+            <a class="wiki" href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank" rel="noopener"
+                aria-label="Visit Tic Tac Toe's Wikipedia page (link opens in new tab)"><i
+                    class="fa-brands fa-wikipedia-w"></i></a>
+            <a class="github" href="https://github.com/Inc21/tic-tac-toe-pp2" target="_blank" rel="noopener"
+                aria-label="Visit Tic Tac Toe's Github page (link opens in new tab)"><i
+                    class="fa-brands fa-github"></i></a>
+            <a class="linkedin" href="https://www.linkedin.com/in/indrek-mannik-038770259/" target="_blank"
+                rel="noopener" aria-label="Visit Indrek Mannik's Linked In page (link opens in new tab)"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
     <script src="assets/js/rules.js"></script>
     <script src="assets/js/options.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

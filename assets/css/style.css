@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     background: url(../images/green_board.webp) no-repeat center center fixed;
-    background-color: rgb(84,122,135);
+    background-color: rgb(84, 122, 135);
     background-size: cover;
     font-family: 'Caveat Brush', cursive, sans-serif;
     color: #f5f5f5;
@@ -14,110 +14,112 @@
     text-align: center;
     height: 100%;
     width: 100%;
-  }
+}
 
-  :focus {outline: #f5f5f5 solid 3px;}
+:focus {
+    outline: #f5f5f5 solid 3px;
+}
 
-  h1 {
+h1 {
     width: 100%;
     font-size: clamp(2rem, 1rem + 10vw, 5rem);
     letter-spacing: 5px;
     text-transform: uppercase;
-  }
+}
 
-    /* Main container */
+/* Main container */
 
-    #container {
-      display: flex;
-      flex-flow: column wrap;
-      min-height: calc(100vh - 14.5rem);
-      align-items: center;
-      gap: 2rem;
-    }
+#container {
+    display: flex;
+    flex-flow: column wrap;
+    min-height: calc(100vh - 14.5rem);
+    align-items: center;
+    gap: 2rem;
+}
 
-    #container a {
-      text-decoration: none;
-      color: inherit;
-    }
+#container a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    /* Draw game board and boxes on the screen */
+/* Draw game board and boxes on the screen */
 
+.gameBoard {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    /* text-align: center; */
+    justify-content: center;
+    width: 510px;
+    height: 510px;
+}
+
+.box {
+    width: 165px;
+    height: 165px;
+    font-size: 120px;
+}
+
+[id="0"] {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+[id="1"] {
+    border-bottom: 2px solid white;
+}
+
+[id="2"] {
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+[id="3"] {
+    border-right: 2px solid white;
+}
+
+[id="5"] {
+    border-left: 2px solid white;
+}
+
+[id="6"] {
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+}
+
+[id="7"] {
+    border-top: 2px solid white;
+}
+
+[id="8"] {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+}
+
+/* Game board media query for screens smaller than 500px */
+
+@media screen and (max-width: 510px) {
     .gameBoard {
-      display: flex;
-      flex-flow: row wrap;
-      align-content: flex-start;
-      /* text-align: center; */
-      justify-content: center;
-      width: 510px;
-      height: 510px; 
+        width: 310px;
+        height: 310px;
     }
 
     .box {
-      width: 165px;
-      height: 165px;
-      font-size: 120px;
-    }
-  
-    [id="0"] {
-      border-right: 2px solid white;
-      border-bottom: 2px solid white;
-    }
-  
-    [id="1"] {
-      border-bottom: 2px solid white;
-    }
-  
-    [id="2"] {
-      border-left: 2px solid white;
-      border-bottom: 2px solid white;
-    }
-  
-    [id="3"] {
-      border-right: 2px solid white;
-    }
-  
-    [id="5"] {
-      border-left: 2px solid white;
-    }
-  
-    [id="6"] {
-      border-top: 2px solid white;
-      border-right: 2px solid white;
-    }
-  
-    [id="7"] {
-      border-top: 2px solid white;
-    }
-  
-    [id="8"] {
-      border-left: 2px solid white;
-      border-top: 2px solid white;
-    }
-
-    /* Game board media query for screens smaller than 500px */
-
-    @media screen and (max-width: 510px) {
-      .gameBoard {
-        width: 310px;
-        height: 310px;
-      }
-
-      .box {
         width: 100px;
         height: 100px;
         font-size: 80px;
-      }
     }
+}
 
-    /* Game rules area */
+/* Game rules area */
 
-  .rules {
+.rules {
     width: 100vw;
     text-align: center;
     letter-spacing: 2px;
-  }
+}
 
-  .rules  ul {
+.rules ul {
     background-color: rgba(71, 71, 71, 0.9);
     border-radius: 10px;
     padding: 2rem;
@@ -129,20 +131,20 @@
     height: 100%;
     width: 100%;
     list-style: none;
-  }
+}
 
-  .rules ul li {
+.rules ul li {
     padding: 1rem;
-  }
+}
 
-  #rulesBtn {
+#rulesBtn {
     position: relative;
     margin: 1rem;
     width: 18rem;
     z-index: 9999;
-  }
+}
 
-  button {
+button {
     font-size: 2rem;
     font-weight: bolder;
     border-radius: 1rem;
@@ -160,40 +162,40 @@
     cursor: pointer;
     box-shadow: 0px 3px #3C3F42;
     white-space: nowrap;
-  }
+}
 
-  button:hover {
+button:hover {
     transform: scale(1.05);
     box-shadow: 0px 5px #3C3F42;
     transition: 200ms;
-  }
+}
 
-  button:active {
+button:active {
     box-shadow: 0px 3px #3C3F42;
     transform: translateY(4px);
-  }
+}
 
-  /* options area */
+/* options area */
 
-  .optionArea {
+.optionArea {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     position: relative;
-  }
+}
 
-  .optionArea h2 {
+.optionArea h2 {
     letter-spacing: 3px;
     font-size: clamp(1.5rem, 4vw, 2rem);
     text-transform: uppercase;
-  }
+}
 
-  #blink {
+#blink {
     font-size: clamp(1.5rem, 4vw, 2rem);
-  }
+}
 
-  .optBtn {
+.optBtn {
     width: 150px;
     border: 1px solid #f5f5f5;
     font-size: 1.5rem;
@@ -203,32 +205,32 @@
     background-color: rgba(177, 181, 247, 0.2);
     cursor: pointer;
     box-shadow: 1px 1px #3C3F42;
-  }
+}
 
-  .optBtn:hover {
+.optBtn:hover {
     background-color: rgba(78, 53, 36, 0.5);
     transform: scale(1.05);
     box-shadow: 0px 5px #3C3F42;
     transition: 200ms;
-  }
+}
 
-  #playBtn {
+#playBtn {
     margin: 1rem;
-  }
+}
 
-  /* game over area */
+/* game over area */
 
-  .gameOver h1 {
+.gameOver h1 {
     font-size: clamp(1.5rem, 4vw, 10rem);
     padding-bottom: 2rem;
-  }
+}
 
-  .gameOver h2 {
+.gameOver h2 {
     font-size: clamp(1.5rem, 10vw, 30rem);
     padding-bottom: 2rem;
-  }
+}
 
- .play {
+.play {
     font-size: 2rem;
     font-weight: bolder;
     border-radius: 1rem;
@@ -247,21 +249,22 @@
     white-space: nowrap;
     text-align: center;
     margin: 0 auto;
- }
+}
 
- .play:hover {
-  background-color: rgba(78, 53, 36, 0.5);
-  transform: scale(1.05);
-  box-shadow: 0px 5px #3C3F42;
-  transition: 200ms;
- }
-  /* onclick classes */
-
-  .active {
+.play:hover {
     background-color: rgba(78, 53, 36, 0.5);
-  }
+    transform: scale(1.05);
+    box-shadow: 0px 5px #3C3F42;
+    transition: 200ms;
+}
 
-  .hide {
+/* onclick classes */
+
+.active {
+    background-color: rgba(78, 53, 36, 0.5);
+}
+
+.hide {
     display: none;
 }
 
@@ -273,9 +276,9 @@
     background-color: rgba(255, 0, 0, 0.5);
 }
 
-  /* Footer area */
+/* Footer area */
 
-  #footer {
+#footer {
     width: 100vw;
     height: 9rem;
     background: url(../images/wood_board.webp);
@@ -286,43 +289,43 @@
     font-size: clamp(40px, 6vw, 60px);
     border-top: 5px solid rgba(78, 53, 36, 0.7);
     text-decoration: none;
-  }
+}
 
-  footer > div > a {
+footer>div>a {
     padding: 10px 25px;
     text-decoration: none;
     color: #f5f5f5;
-  }
+}
 
-  footer > div > a :hover {
+footer>div>a :hover {
     text-shadow: 5px 5px #3C3F42;
     transition: 200ms;
     transform: scale(1.1);
-  }
+}
 
-  /* 404.html */
+/* 404.html */
 #error {
-  min-height: calc(100vh - 9rem);
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+    min-height: calc(100vh - 9rem);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
 #error h1 {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 #error span {
-  color: rgba(243, 247, 10, 1);
+    color: rgba(243, 247, 10, 1);
 }
 
 #error p {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  text-decoration: none;
-  margin: 1rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-decoration: none;
+    margin: 1rem;
 }
 
 #error p a {
-  text-decoration: none;
-  color: #f5f5f5;
+    text-decoration: none;
+    color: #f5f5f5;
 }

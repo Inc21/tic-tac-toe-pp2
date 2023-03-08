@@ -1,3 +1,8 @@
+/**
+ * Initialization function
+ * @param {object} player
+ * @param {object} OPPONENT
+ */
 function init(player, OPPONENT) {
     let boxes = Array.from(document.getElementsByClassName("box"));
     const gameBoard = document.querySelector(".gameBoard");
@@ -14,111 +19,102 @@ function init(player, OPPONENT) {
         [1, 4, 7],
         [2, 5, 8],
         [0, 4, 8],
-        [2, 4, 6]
+        [2, 4, 6],
     ];
 
     let GAME_OVER = false;
 
-       box = boxes;
-        for (i = 0; i < boxes.length; i++) {
-            box[i].addEventListener("click", function(e){
-               
-               id = e.target.id;
+    box = boxes;
+    for (i = 0; i < boxes.length; i++) {
+        box[i].addEventListener("click", function (e) {
+            id = e.target.id;
 
-                if(GAME_OVER) return;
+            if (GAME_OVER) return;
 
-                if(gameData[id]) return;
+            if (gameData[id]) return;
 
-                e.target.innerText = currentPlayer;
-                
-                
-                gameData[id] = currentPlayer;
-                
-                
+            e.target.innerText = currentPlayer;
+
+            gameData[id] = currentPlayer;
+
+            // check for win
+            if (isWinner(gameData, currentPlayer)) {
+                showGameOver(currentPlayer);
+                GAME_OVER = true;
+                return;
+            }
+
+            // check if draw
+            if (isDraw(gameData)) {
+                showGameOver('<i class="fa-regular fa-face-frown"></i>');
+                GAME_OVER = true;
+                return;
+            }
+
+            if (OPPONENT == "computer") {
+                let id = minimax(gameData, player.computer).id;
+
+                // computer move delay from 0s to 1s
+
+                setTimeout(timeOut, Math.floor(Math.random() * 1000));
+
+                function timeOut() {
+                    boxes[id].innerText = player.computer;
+                }
+
+                gameData[id] = player.computer;
+
                 // check for win
-                if(isWinner(gameData, currentPlayer)){
-                    showGameOver(currentPlayer);
+                if (isWinner(gameData, player.computer)) {
+                    showGameOver(player.computer);
                     GAME_OVER = true;
                     return;
                 }
 
                 // check if draw
-                if(isDraw(gameData)){
+                if (isDraw(gameData)) {
                     showGameOver('<i class="fa-regular fa-face-frown"></i>');
                     GAME_OVER = true;
                     return;
                 }
-                
-                if (OPPONENT == "computer") {
-                    let id = minimax( gameData, player.computer ).id;
+            } else {
+                // switch players
+                currentPlayer =
+                    currentPlayer == player.man ? player.friend : player.man;
+            }
+        });
+    }
 
-                    // computer move delay from 0s to 1s
-                    
-                    setTimeout(timeOut, Math.floor(Math.random() * 1000 ));
-                
-                    function timeOut() {
-                        boxes[id].innerText = player.computer;
-                        
-                    }
-                
-                    
-                    
-                    gameData[id] = player.computer;
-                    
-                    
-                   
-
-                    // check for win
-                    if(isWinner(gameData, player.computer)){
-                        showGameOver(player.computer);
-                        GAME_OVER = true;
-                        return;
-                    }
-
-                    // check if draw
-                    if(isDraw(gameData)){
-                        showGameOver('<i class="fa-regular fa-face-frown"></i>');
-                        GAME_OVER = true;
-                        return;
-                    }
-                    }else {
-                        // switch players
-                        currentPlayer = currentPlayer == player.man ? player.friend : player.man;
-                        
-                    }      
-            });
-            };   
-
-            // minimax function
+    // minimax function
     function minimax(gameData, PLAYER) {
-        if (isWinner(gameData, player.computer) ) return { evaluation: +10 };
-        if (isWinner(gameData, player.man)      ) return { evaluation: -10 };
-        if (isDraw(gameData)                    ) return { evaluation: 0 }; 
+        if (isWinner(gameData, player.computer)) return { evaluation: +10 };
+        if (isWinner(gameData, player.man)) return { evaluation: -10 };
+        if (isDraw(gameData)) return { evaluation: 0 };
 
         // empty spaces
         let EMPTY_SPACES = getEmptySpaces(gameData);
-        
+
         // save all moves and their evaluations
         let moves = [];
-        
+
         // loop over empty spaces to evaluate them
-        for(let i = 0; i < EMPTY_SPACES.length; i++) {
+        for (let i = 0; i < EMPTY_SPACES.length; i++) {
             // get id of the empty space
             let id = EMPTY_SPACES[i];
-            
+
             // back up the space
             let backup = gameData[id];
 
             // make the move for the player
             gameData[id] = PLAYER;
-        
+
             // save the move id and evaluation
             let move = {};
             move.id = id;
             // move evaluation
-            if(PLAYER == player.computer) {
+            if (PLAYER == player.computer) {
                 move.evaluation = minimax(gameData, player.man).evaluation;
-            }else{
+            } else {
                 move.evaluation = minimax(gameData, player.computer).evaluation;
             }
 
@@ -132,63 +128,62 @@ function init(player, OPPONENT) {
         // minimax algorithm
         let bestMove;
 
-        if(PLAYER == player.computer) {
+        if (PLAYER == player.computer) {
             // maximizer
             let bestEvaluation = -Infinity;
-            for(let i = 0; i < moves.length; i++){
-                if(moves[i].evaluation > bestEvaluation) {
+            for (let i = 0; i < moves.length; i++) {
+                if (moves[i].evaluation > bestEvaluation) {
                     bestEvaluation = moves[i].evaluation;
-                    bestMove = moves[i]; 
+                    bestMove = moves[i];
                 }
             }
-        }else{
-            
-                // minimizer
-                let bestEvaluation = +Infinity;
-                for(let i = 0; i < moves.length; i++){
-                    if(moves[i].evaluation < bestEvaluation) {
-                        bestEvaluation = moves[i].evaluation;
-                        bestMove = moves[i]; 
-                }   
+        } else {
+            // minimizer
+            let bestEvaluation = +Infinity;
+            for (let i = 0; i < moves.length; i++) {
+                if (moves[i].evaluation < bestEvaluation) {
+                    bestEvaluation = moves[i].evaluation;
+                    bestMove = moves[i];
+                }
             }
         }
         return bestMove;
     }
 
     // get empty spaces
-    function getEmptySpaces(gameData){
+    function getEmptySpaces(gameData) {
         let EMPTY = [];
-        for(let id = 0; id < gameData.length; id++) {
-            if(!gameData[id]) {
-                EMPTY.push(id)
-            };
+        for (let id = 0; id < gameData.length; id++) {
+            if (!gameData[id]) {
+                EMPTY.push(id);
+            }
         }
-        return EMPTY;   
+        return EMPTY;
     }
-    
-   function isWinner(gameData, player){
+
+    function isWinner(gameData, player) {
         for (let i = 0; i < COMBOS.length; i++) {
             let won = true;
 
-            for(let j = 0; j < COMBOS[i].length; j++) {
+            for (let j = 0; j < COMBOS[i].length; j++) {
                 let id = COMBOS[i][j];
                 won = gameData[id] == player && won;
             }
 
-            if(won){
+            if (won) {
                 return true;
-            }   
+            }
         }
         return false;
-   } 
+    }
 
-      // check if draw
+    // check if draw
     function isDraw() {
         let isBoardFull = true;
         for (let i = 0; i < gameData.length; i++) {
             isBoardFull = gameData[i] && isBoardFull;
         }
-        if(isBoardFull){
+        if (isBoardFull) {
             return true;
         }
         return false;
@@ -196,7 +191,10 @@ function init(player, OPPONENT) {
 
     // show game over
     function showGameOver(player) {
-        let message = player == '<i class="fa-regular fa-face-frown"></i>' ? "It's a draw" : "<i class='fa-solid fa-trophy'></i> The Winner is";
+        let message =
+            player == '<i class="fa-regular fa-face-frown"></i>'
+                ? "It's a draw"
+                : "<i class='fa-solid fa-trophy'></i> The Winner is";
 
         gameOverElement.innerHTML = `
         <h1>${message}</h1>
@@ -211,18 +209,19 @@ function init(player, OPPONENT) {
 
 // Blinking arrow
 function blink() {
-    if(document.getElementById("blink")) {
+    if (document.getElementById("blink")) {
         let b = document.getElementById("blink");
-        b.style.color = (b.style.color == "lightsteelblue" ? "white" : "lightsteelblue");
+        b.style.color =
+            b.style.color == "lightsteelblue" ? "white" : "lightsteelblue";
         setTimeout("blink()", 1100);
     }
 }
 
 // Blinking exclamation on 404 page
 function blinkEx() {
-    if(document.getElementById("exclamation")) {
+    if (document.getElementById("exclamation")) {
         let blink = document.getElementById("exclamation");
-        blink.style.color = (blink.style.color == "yellow" ? "white" : "yellow");
+        blink.style.color = blink.style.color == "yellow" ? "white" : "yellow";
         setTimeout("blinkEx()", 1100);
     }
 }
