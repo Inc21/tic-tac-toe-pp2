@@ -16,6 +16,8 @@
     width: 100%;
   }
 
+  :focus {outline: black solid 3px;}
+
   h1 {
     width: 100%;
     font-size: clamp(2rem, 1rem + 10vw, 5rem);
