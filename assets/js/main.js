@@ -217,3 +217,12 @@ function blink() {
         setTimeout("blink()", 1100);
     }
 }
+
+// Blinking exclamation on 404 page
+function blinkEx() {
+    if(document.getElementById("exclamation")) {
+        let blink = document.getElementById("exclamation");
+        blink.style.color = (blink.style.color == "yellow" ? "white" : "yellow");
+        setTimeout("blinkEx()", 1100);
+    }
+}
