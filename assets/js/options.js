@@ -8,6 +8,9 @@ const oBtn = document.getElementById("oBtn");
 const playBtn = document.getElementById("playBtn");
 const gameOverElement = document.querySelector(".gameOver");
 const gameBoard = document.querySelector(".gameBoard");
+const pleaseSelect = document.querySelector(".pleaseSelect");
+const selSym = document.querySelector(".selSym")
+const arrow = document.querySelector(".arrow");
 
 // variables for options
 let OPPONENT;
@@ -19,6 +22,8 @@ compBtn.addEventListener("click", function () {
     switchActive(friendBtn, compBtn);
     this.classList.remove("noSelect");
     friendBtn.classList.remove("noSelect");
+    pleaseSelect.classList.add("hide");
+    arrow.classList.remove("hide");
 });
 
 friendBtn.addEventListener("click", function () {
@@ -26,6 +31,8 @@ friendBtn.addEventListener("click", function () {
     switchActive(compBtn, friendBtn);
     this.classList.remove("noSelect");
     compBtn.classList.remove("noSelect");
+    pleaseSelect.classList.add("hide");
+    arrow.classList.remove("hide");
 });
 
 xBtn.addEventListener("click", function () {
@@ -35,6 +42,8 @@ xBtn.addEventListener("click", function () {
     switchActive(oBtn, xBtn);
     this.classList.remove("noSelect");
     oBtn.classList.remove("noSelect");
+    selSym.classList.add("hide");
+    arrow.classList.remove("hide");
 });
 
 oBtn.addEventListener("click", function () {
@@ -44,26 +53,35 @@ oBtn.addEventListener("click", function () {
     switchActive(xBtn, oBtn);
     this.classList.remove("noSelect");
     xBtn.classList.remove("noSelect");
+    selSym.classList.add("hide");
+    arrow.classList.remove("hide");
 });
 
 playBtn.addEventListener("click", function () {
     if (!OPPONENT) {
         compBtn.classList.add("noSelect");
         friendBtn.classList.add("noSelect");
+        pleaseSelect.classList.remove("hide");
+        pleaseSelect.innerHTML = "please choose your opponent.";
+        arrow.classList.add("hide");
         return;
-    }
+    }   
 
     if (!player.man) {
         xBtn.classList.add("noSelect");
         oBtn.classList.add("noSelect");
+        selSym.classList.remove("hide");
+        selSym.innerHTML = "please choose your symbol.";
+        arrow.classList.add("hide");
         return;
-    }
+    } 
+
+    
 
     // run game
     init(player, OPPONENT);
     options.classList.add("hide");
     gameBoard.classList.remove("hide");
-
 });
 
 // add/remove .active on option elements

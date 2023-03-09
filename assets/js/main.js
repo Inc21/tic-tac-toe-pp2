@@ -7,7 +7,7 @@ function init(player, OPPONENT) {
     let boxes = Array.from(document.getElementsByClassName("box"));
     const gameBoard = document.querySelector(".gameBoard");
     const spaces = [];
-    let gameData = new Array(9);
+    const gameData = new Array(9);
     let currentPlayer = player.man;
 
     // Win combinations
@@ -210,8 +210,8 @@ function init(player, OPPONENT) {
 
 // Blinking arrow
 function blink() {
-    if (document.getElementById("blink")) {
-        let b = document.getElementById("blink");
+    if (document.querySelector(".blink")) {
+        let b = document.querySelector(".blink");
         b.style.color =
             b.style.color == "lightsteelblue" ? "white" : "lightsteelblue";
         setTimeout("blink()", 1100);

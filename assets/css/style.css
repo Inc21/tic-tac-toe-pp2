@@ -119,9 +119,12 @@ h1 {
 }
 
 .rules ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
     background-color: rgba(71, 71, 71, 0.9);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 0.5rem 0.5rem 14rem;
     font-size: clamp(1rem, 2vw, 2.5rem);
     text-align: center;
     position: fixed;
@@ -130,10 +133,11 @@ h1 {
     height: 100%;
     width: 100%;
     list-style: none;
+   
 }
 
 .rules ul li {
-    padding: 5px;
+    padding: 10px;
 }
 
 #rulesBtn {
@@ -190,8 +194,18 @@ button:active {
     text-transform: uppercase;
 }
 
-#blink {
+.blink {
     font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.pleaseSelect {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    background-color: rgba(255, 0, 0, 0.5);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: #f5f5f5 solid 1px;
+    border-radius: 1rem;
+    padding: 5px 15px;
 }
 
 .optBtn {
