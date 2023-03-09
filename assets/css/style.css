@@ -113,7 +113,6 @@ h1 {
 /* Game rules area */
 
 .rules {
-    width: 100vw;
     text-align: center;
     letter-spacing: 2px;
 }
@@ -123,7 +122,6 @@ h1 {
     flex-flow: column wrap;
     justify-content: space-between;
     background-color: rgba(71, 71, 71, 0.9);
-    border-radius: 10px;
     padding: 0.5rem 0.5rem 14rem;
     font-size: clamp(1rem, 2vw, 2.5rem);
     text-align: center;
@@ -131,7 +129,7 @@ h1 {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     list-style: none;
    
 }
