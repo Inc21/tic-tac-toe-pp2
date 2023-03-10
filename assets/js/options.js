@@ -25,18 +25,22 @@ compBtn.addEventListener("click", function () {
 
     if ((pleaseSelect.innerHTML === "please choose your opponent.") || (OPPONENT)) {
         switchHide(arrow, pleaseSelect);
-    }if ((selSym.innerHTML === "please choose your symbol.") && (OPPONENT)) {
-        arrow.classList.add("hide"); 
-     } if ((OPPONENT) && (player.man)) {
+    } if ((selSym.innerHTML === "please choose your symbol.") && (OPPONENT)) {
+        arrow.classList.add("hide");
+    } if ((OPPONENT) && (player.man)) {
         arrow.classList.remove("hide")
-     }
-    });
+    }
+});
 
 friendBtn.addEventListener("click", function () {
     OPPONENT = "friend";
     switchActive(compBtn, friendBtn);
     this.classList.remove("noSelect");
     compBtn.classList.remove("noSelect");
+
+    if ((player.man) && OPPONENT) {
+        switchHide(arrow, pleaseSelect);
+    }
 });
 
 xBtn.addEventListener("click", function () {
@@ -46,17 +50,14 @@ xBtn.addEventListener("click", function () {
     switchActive(oBtn, xBtn);
     this.classList.remove("noSelect");
     oBtn.classList.remove("noSelect");
-    
+
     if ((selSym.innerHTML === "please choose your symbol.") || (player.man)) {
         switchHide(arrow, pleaseSelect);
-    }
-
-    if ((pleaseSelect.innerHTML === "please choose your opponent.") && (player.man)) {
-        arrow.classList.add("hide"); 
-     } 
-     if ((OPPONENT) && (player.man)) {
+    } if ((pleaseSelect.innerHTML === "please choose your opponent.") && (player.man)) {
+        arrow.classList.add("hide");
+    } if ((OPPONENT) && (player.man)) {
         switchHide(arrow, selSym);
-     }
+    }
 });
 
 oBtn.addEventListener("click", function () {
@@ -69,11 +70,8 @@ oBtn.addEventListener("click", function () {
     selSym.classList.add("hide");
     if ((OPPONENT) && (player.man)) {
         arrow.classList.remove("hide");
-     }
-  
+    }
 });
-
-
 
 playBtn.addEventListener("click", function () {
     if (!OPPONENT) {
@@ -83,7 +81,7 @@ playBtn.addEventListener("click", function () {
         pleaseSelect.innerHTML = "please choose your opponent.";
         arrow.classList.add("hide");
         return;
-    }   
+    }
 
     if (!player.man) {
         xBtn.classList.add("noSelect");
@@ -92,7 +90,7 @@ playBtn.addEventListener("click", function () {
         selSym.innerHTML = "please choose your symbol.";
         arrow.classList.add("hide");
         return;
-    }     
+    }
 
     // Run game function
     init(player, OPPONENT);
