@@ -22,17 +22,21 @@ compBtn.addEventListener("click", function () {
     switchActive(friendBtn, compBtn);
     this.classList.remove("noSelect");
     friendBtn.classList.remove("noSelect");
-    pleaseSelect.classList.add("hide");
-    arrow.classList.remove("hide");
-});
+
+    if ((pleaseSelect.innerHTML === "please choose your opponent.") || (OPPONENT)) {
+        switchHide(arrow, pleaseSelect);
+    }if ((selSym.innerHTML === "please choose your symbol.") && (OPPONENT)) {
+        arrow.classList.add("hide"); 
+     } if ((OPPONENT) && (player.man)) {
+        arrow.classList.remove("hide")
+     }
+    });
 
 friendBtn.addEventListener("click", function () {
     OPPONENT = "friend";
     switchActive(compBtn, friendBtn);
     this.classList.remove("noSelect");
     compBtn.classList.remove("noSelect");
-    pleaseSelect.classList.add("hide");
-    arrow.classList.remove("hide");
 });
 
 xBtn.addEventListener("click", function () {
@@ -42,8 +46,17 @@ xBtn.addEventListener("click", function () {
     switchActive(oBtn, xBtn);
     this.classList.remove("noSelect");
     oBtn.classList.remove("noSelect");
-    selSym.classList.add("hide");
-    arrow.classList.remove("hide");
+    
+    if ((selSym.innerHTML === "please choose your symbol.") || (player.man)) {
+        switchHide(arrow, pleaseSelect);
+    }
+
+    if ((pleaseSelect.innerHTML === "please choose your opponent.") && (player.man)) {
+        arrow.classList.add("hide"); 
+     } 
+     if ((OPPONENT) && (player.man)) {
+        switchHide(arrow, selSym);
+     }
 });
 
 oBtn.addEventListener("click", function () {
@@ -54,8 +67,13 @@ oBtn.addEventListener("click", function () {
     this.classList.remove("noSelect");
     xBtn.classList.remove("noSelect");
     selSym.classList.add("hide");
-    arrow.classList.remove("hide");
+    if ((OPPONENT) && (player.man)) {
+        arrow.classList.remove("hide");
+     }
+  
 });
+
+
 
 playBtn.addEventListener("click", function () {
     if (!OPPONENT) {
@@ -74,11 +92,9 @@ playBtn.addEventListener("click", function () {
         selSym.innerHTML = "please choose your symbol.";
         arrow.classList.add("hide");
         return;
-    } 
+    }     
 
-    
-
-    // run game
+    // Run game function
     init(player, OPPONENT);
     options.classList.add("hide");
     gameBoard.classList.remove("hide");
@@ -88,4 +104,12 @@ playBtn.addEventListener("click", function () {
 function switchActive(off, on) {
     off.classList.remove("active");
     on.classList.add("active");
+}
+
+/**
+ * hide class add/remove function
+ */
+function switchHide(off, on) {
+    off.classList.remove("hide");
+    on.classList.add("hide");
 }
