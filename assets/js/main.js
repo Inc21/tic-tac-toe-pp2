@@ -24,6 +24,7 @@ function init(player, OPPONENT) {
 
     let GAME_OVER = false;
 
+    // Get all individual boxes and id to then when clicked
     box = boxes;
     for (i = 0; i < boxes.length; i++) {
         box[i].addEventListener("click", function (e) {
@@ -56,7 +57,6 @@ function init(player, OPPONENT) {
                 let id = minimax(gameData, player.computer).id;
 
                 // computer move delay from 0s to 1s
-
                 setTimeout(timeOut, Math.floor(Math.random() * 1000));
 
                 function timeOut() {
@@ -79,20 +79,26 @@ function init(player, OPPONENT) {
                     return;
                 }
             } else {
+
                 // switch players
                 currentPlayer =
                     currentPlayer == player.man ? player.friend : player.man;
             }
         });
     }
-
-    // minimax function
+    
+    /**
+     * minimax function
+     * @param {variable} gameData 
+     * @param {object} PLAYER 
+     * @returns 
+     */
     function minimax(gameData, PLAYER) {
         if (isWinner(gameData, player.computer)) return { evaluation: +10 };
         if (isWinner(gameData, player.man)) return { evaluation: -10 };
         if (isDraw(gameData)) return { evaluation: 0 };
 
-        // empty spaces
+        // get empty spaces
         let EMPTY_SPACES = getEmptySpaces(gameData);
 
         // save all moves and their evaluations
@@ -112,6 +118,7 @@ function init(player, OPPONENT) {
             // save the move id and evaluation
             let move = {};
             move.id = id;
+
             // move evaluation
             if (PLAYER == player.computer) {
                 move.evaluation = minimax(gameData, player.man).evaluation;
@@ -162,6 +169,12 @@ function init(player, OPPONENT) {
         return EMPTY;
     }
 
+    /**
+     * Check if winner
+     * @param {variable} gameData 
+     * @param {object} player 
+     * @returns 
+     */
     function isWinner(gameData, player) {
         for (let i = 0; i < COMBOS.length; i++) {
             let won = true;
@@ -190,7 +203,7 @@ function init(player, OPPONENT) {
         return false;
     }
 
-    // show game over
+    // show game over window
     function showGameOver(player) {
         let message =
             player == '<i class="fa-regular fa-face-frown"></i>'
@@ -208,7 +221,7 @@ function init(player, OPPONENT) {
     }
 }
 
-// Blinking arrow
+// Blinking arrow on options area
 function blink() {
     if (document.querySelector(".blink")) {
         let b = document.querySelector(".blink");

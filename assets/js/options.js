@@ -1,3 +1,9 @@
+/*
+All the javascript for tic tac toe game that can played against computer or friend.
+
+Options section. It would be displayed first and has to be filled to reveal 
+game board.
+*/
 // get elements
 const options = document.querySelector(".optionArea");
 // const gameOverArea = document.getElementsByClassName("gameOver");
@@ -23,6 +29,7 @@ compBtn.addEventListener("click", function () {
     this.classList.remove("noSelect");
     friendBtn.classList.remove("noSelect");
 
+    // To switch "hide" class when different option selected
     if ((pleaseSelect.innerHTML === "please choose your opponent.") || (OPPONENT)) {
         switchHide(arrow, pleaseSelect);
     } if ((selSym.innerHTML === "please choose your symbol.") && (OPPONENT)) {
@@ -38,7 +45,10 @@ friendBtn.addEventListener("click", function () {
     this.classList.remove("noSelect");
     compBtn.classList.remove("noSelect");
 
-    if ((player.man) && OPPONENT) {
+    // To switch "hide" class when different option selected
+    if ((player.man) && (OPPONENT)) {
+        switchHide(arrow, pleaseSelect);
+    } if ((pleaseSelect.innerHTML === "please choose your opponent.") || (OPPONENT)) {
         switchHide(arrow, pleaseSelect);
     }
 });
@@ -51,6 +61,7 @@ xBtn.addEventListener("click", function () {
     this.classList.remove("noSelect");
     oBtn.classList.remove("noSelect");
 
+    // To switch "hide" class when different option selected
     if ((selSym.innerHTML === "please choose your symbol.") || (player.man)) {
         switchHide(arrow, pleaseSelect);
     } if ((pleaseSelect.innerHTML === "please choose your opponent.") && (player.man)) {
@@ -58,6 +69,7 @@ xBtn.addEventListener("click", function () {
         switchHide(pleaseSelect, arrow);
     } if ((OPPONENT) && (player.man)) {
         switchHide(arrow, selSym);
+        pleaseSelect.classList.add("hide");
     }
 });
 
@@ -68,12 +80,15 @@ oBtn.addEventListener("click", function () {
     switchActive(xBtn, oBtn);
     this.classList.remove("noSelect");
     xBtn.classList.remove("noSelect");
+
+    // To switch "hide" class when different option selected
     selSym.classList.add("hide");
     if ((OPPONENT) && (player.man)) {
-        arrow.classList.remove("hide");
+        switchHide(arrow, pleaseSelect);
     }
 });
 
+// Add listener to play button
 playBtn.addEventListener("click", function () {
     if (!OPPONENT) {
         compBtn.classList.add("noSelect");
@@ -105,9 +120,7 @@ function switchActive(off, on) {
     on.classList.add("active");
 }
 
-/**
- * hide class add/remove function
- */
+// hide class add/remove function
 function switchHide(off, on) {
     off.classList.remove("hide");
     on.classList.add("hide");
