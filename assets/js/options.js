@@ -55,6 +55,7 @@ xBtn.addEventListener("click", function () {
         switchHide(arrow, pleaseSelect);
     } if ((pleaseSelect.innerHTML === "please choose your opponent.") && (player.man)) {
         arrow.classList.add("hide");
+        switchHide(pleaseSelect, arrow);
     } if ((OPPONENT) && (player.man)) {
         switchHide(arrow, selSym);
     }
