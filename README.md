@@ -5,30 +5,33 @@ some text
 The link to the live website can be found [here.](https://inc21.github.io/tic-tac-toe-pp2/)
 
 
-![Image to show page responsiveness on smaller screens.](/assets/)
+![Image to show page responsiveness on smaller screens.](/assets/images/readme_images/responsivness_mockup.png)
 
 
-# User Stories
+# User Stories  
 
-### First-time user objectives
+### 
 
-- As a first-time user,
-- As a first-time user,
-- As a first-time user, 
-- As a first-time user,
-- As a first-time user,
+User who is not familiar with Tic-Tac-Toe game.
 
-### Returning user objectives
+- I want to play a game that is fun and easy to master within seconds.
+- I want to see clear rules and/or instructions for the game.
+- I want to be able to play this game regardless of my device screen size, power or network speed.
+- I want the site to visually pleasing and have good color contrast.
+- I want to see clear confirmation who’s turn it is.
+- I want to be able to easily keep  win/lose score.
 
-- As a returning user,
-- As a returning user, 
-- As a returning user, 
-- As a returning user,
+### Returning user who is familiar with Tic-Tac-Toe game.
 
-###  Site owner objectives
-- As a site owner,
-- As a site owner,
-- As a site owner, 
+- As a returning user, I would like to find a classic game that I have played many times before.
+- As a returning user, I expect all game controls to be familiar to me.
+- As a returning user, I would like to see external links in case I want to learn more about Tic-Tac-Toe.
+
+### Site owner objectives
+
+- As a site owner, I want to provide users with well loved and fun game.
+- As a site owner, I would like to tell users about the history of the game and all the different variants .
+- As a site owner, I want to make it very easy for a user to pass away time, sitting on train or a bus or waiting for something etc.
 
 # Design
 
