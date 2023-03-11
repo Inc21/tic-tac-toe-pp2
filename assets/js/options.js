@@ -1,12 +1,11 @@
 /*
-All the javascript for tic tac toe game that can played against computer or friend.
+All the javascript for tic tac toe game that can played against a computer or a friend.
 
 Options section. It would be displayed first and has to be filled to reveal 
 game board.
 */
 // get elements
 const options = document.querySelector(".optionArea");
-// const gameOverArea = document.getElementsByClassName("gameOver");
 const compBtn = document.getElementById("computer");
 const friendBtn = document.getElementById("friend");
 const xBtn = document.getElementById("xBtn");
@@ -15,7 +14,7 @@ const playBtn = document.getElementById("playBtn");
 const gameOverElement = document.querySelector(".gameOver");
 const gameBoard = document.querySelector(".gameBoard");
 const pleaseSelect = document.querySelector(".pleaseSelect");
-const selSym = document.querySelector(".selSym")
+const selSym = document.querySelector(".selSym");
 const arrow = document.querySelector(".arrow");
 
 // variables for options
@@ -35,7 +34,7 @@ compBtn.addEventListener("click", function () {
     } if ((selSym.innerHTML === "please choose your symbol.") && (OPPONENT)) {
         arrow.classList.add("hide");
     } if ((OPPONENT) && (player.man)) {
-        arrow.classList.remove("hide")
+        arrow.classList.remove("hide");
     }
 });
 
@@ -61,7 +60,7 @@ xBtn.addEventListener("click", function () {
     this.classList.remove("noSelect");
     oBtn.classList.remove("noSelect");
 
-    // To switch "hide" class when different option selected
+    // To switch "hide" class when a different option is selected
     if ((selSym.innerHTML === "please choose your symbol.") || (player.man)) {
         switchHide(arrow, pleaseSelect);
     } if ((pleaseSelect.innerHTML === "please choose your opponent.") && (player.man)) {
@@ -81,7 +80,7 @@ oBtn.addEventListener("click", function () {
     this.classList.remove("noSelect");
     xBtn.classList.remove("noSelect");
 
-    // To switch "hide" class when different option selected
+    // To switch "hide" class when a different option is selected
     selSym.classList.add("hide");
     if ((OPPONENT) && (player.man)) {
         switchHide(arrow, pleaseSelect);
