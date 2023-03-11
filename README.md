@@ -4,15 +4,11 @@ some text
 
 The link to the live website can be found [here.](https://inc21.github.io/tic-tac-toe-pp2/)
 
-
 ![Image to show page responsiveness on smaller screens.](/assets/images/readme_images/responsivness_mockup.png)
 
+# User Stories
 
-# User Stories  
-
-### 
-
-User who is not familiar with Tic-Tac-Toe game.
+###  User who is not familiar with Tic-Tac-Toe game. 
 
 - I want to play a game that is fun and easy to master within seconds.
 - I want to see clear rules and/or instructions for the game.
@@ -34,14 +30,10 @@ User who is not familiar with Tic-Tac-Toe game.
 - As a site owner, I want to make it very easy for a user to pass away time, sitting on train or a bus or waiting for something etc.
 
 # Design
-
+Colour's for this game are are picked very close to background images and are really fallback in case pictures fail to load. Slightly off-white #F5F5F5 is used for all the text and game symbols. 
 ## Colour
 
-some text
-
-
-![Color Pallette](assets/)
-
+| ![](/assets/images/readme_images/wild_sand.png) | ![](/assets/images/readme_images/smalt_blue.png) | ![](/assets/images/readme_images/calio.png) |
 
 
 ## Font
