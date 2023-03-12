@@ -29,11 +29,12 @@ The link to the live website can be found [here.](https://inc21.github.io/tic-ta
 - As a site owner, I would like to tell users about the history of the game and all the different variants .
 - As a site owner, I want to make it very easy for a user to pass away time, sitting on train or a bus or waiting for something etc.
 
-# Design
-Colour's for this game are are picked very close to background images and are really fallback in case pictures fail to load. Slightly off-white #F5F5F5 is used for all the text and game symbols. 
+# Design 
 ## Colour
+Colour's for this game are are picked very close to background images and are really fallback in case pictures fail to load. Slightly off-white #F5F5F5 is used for all the text and game symbols to give game blackboard and and chalk feel.
 
-| ![](/assets/images/readme_images/wild_sand.png) | ![](/assets/images/readme_images/smalt_blue.png) | ![](/assets/images/readme_images/calio.png) |
+
+|![](/assets/images/readme_images/wild_sand.png)|![](/assets/images/readme_images/smalt_blue.png)|![](/assets/images/readme_images/calio.png)|
 
 
 ## Font
@@ -53,15 +54,11 @@ Colour's for this game are are picked very close to background images and are re
 __Home Page__
 
 
-![Home page wireframe](/assets/)
+![Home page wireframe](/assets/images/readme_images/desktop.png)
 
 
 ### Wireframe for smaller mobile screens.
-<p >
-  <img align="left" alt="" src="assets/">
-<br clear="left">
-
-
+![Home page wireframe](/assets/images/readme_images/mobile.png)
 
 # Tools and technologies used
 ## Languages
