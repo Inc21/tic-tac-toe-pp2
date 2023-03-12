@@ -112,7 +112,7 @@ __Options Area__
 ![](/assets/images/readme_images/winner_x.png)
 ![](/assets/images/readme_images/winner_o.png)
 ![](/assets/images/readme_images/draw.png)
-  - Displayed after all squares are filled or there is a winner. 
+  - Displayed after all squares are filled or when there is a winner. 
   - "Play Again" button at the bottom of the the screen re-loads the game.
 
   __Rules__ 
@@ -135,16 +135,17 @@ __The Footer__
 __The Error 404 Page__
 
 ![](/assets/images/readme_images/404_page.png)
-    Read more about it [GitHub custom 404 page](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+
+
+  Read more about it, [GitHub custom 404 page](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
   - This page will be displayed if any user manages to navigate to a page that does not exist.
   - Mistakes happen, this page is very valuable for the user as it shows their error whilst still keeping them on the page with easy navigation back to the home page. 
 
 
 ### Features Left to Implement
 
-- some text.
-- some text.
-- some text.
+- While developing this game I discovered many interesting history and facts about tic tac toe. It would be great to have some of it displayed on the site.
+- Given enough time and knowhow, would like to add more game modes. Tic tac toe is quite easy game to master but there is many more challenging variations out there. For example [Misère](https://en.wikipedia.org/wiki/Mis%C3%A8re), [Wild tic-tac-toe](https://en.wikipedia.org/wiki/Wild_tic-tac-toe), [Number Scrabble](https://en.wikipedia.org/wiki/Number_Scrabble) and many more. 
 
 
 ## Look and feel
