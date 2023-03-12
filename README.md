@@ -87,46 +87,57 @@ __Main Game Page__
 
 ### Existing Features
 
-- __Header of the page__
+__Header of the page__
 
-  - some text
-  - some text.  
+![](/assets/images/readme_images/header.png)
 
-  <br clear="left"/>
-
-<img align="left" width="" height="" src="">
-
-<br clear="left"/>  
-
-- __Home page__
-
-  - some text. 
-  - some text.  
-
-<img align="left" width="" height="" src="assets\">
-
-<br clear="left"/>
-
-- __The Footer__ 
-
-  - some text. 
-  - some text.
-
-<img align="left" width="" height="" src="assets\readme_images\footer.png">  
-
-<br clear="left"/>
+  - Displayed throughout all the game modes. Header text is also a "home" link to navigate back to main game page.
 
 
-- __The Error 404 Page__
+__Options Area__
+
+![](/assets/images/readme_images/options_area.png)
+  - This screen is loaded first when the user loads up the page first. 
+  - The user has to decide who they want to play against and with what symbol.
+  - Once selection is made, user presses "play" to start the game.  
+
+ __Game Board__
+
+![](/assets/images/readme_images/game_play.png)
+  - Game board consists of nine clickable squares that are filled in by JavaScript when user or computer makes it's move.
+  
+
+   __Game end and result confirmation__
+
+![](/assets/images/readme_images/winner_x.png)
+![](/assets/images/readme_images/winner_o.png)
+![](/assets/images/readme_images/draw.png)
+  - Displayed after all squares are filled or there is a winner. 
+  - "Play Again" button at the bottom of the the screen re-loads the game.
+
+  __Rules__ 
+
+![](/assets/images/readme_images/show_rules.png)
+![](/assets/images/readme_images/rules.png)
+
+  - In case that one person who knows nothing about Tic Tac Toe happens to visit this site, there is big and clearly visible rules button after the option area and before the footer. 
+  - Once "Show Rules" button is clicked, it opens dark but transparent full screen window with game rules. Button it self remains in the same place but button label changes to "Hide Rules".
 
 
-    Read more [GitHub custom 404 page](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+__The Footer__ 
+
+![](/assets/images/readme_images/footer.png)
+
+  - The footer is featured on both pages. Includes three links that open in a new window. 
+  - Links are to Wikipedia, GitHub game repository and my Linked In page.
+
+
+__The Error 404 Page__
+
+![](/assets/images/readme_images/404_page.png)
+    Read more about it [GitHub custom 404 page](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
   - This page will be displayed if any user manages to navigate to a page that does not exist.
   - Mistakes happen, this page is very valuable for the user as it shows their error whilst still keeping them on the page with easy navigation back to the home page. 
-
-<img align="left" width="" height="" src="assets\">
-<br clear="left"/>
-
 
 
 ### Features Left to Implement
