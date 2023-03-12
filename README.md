@@ -39,13 +39,12 @@ Colour's for this game are are picked very close to background images and are re
 
 ## Font
 
+Selected Caveat Brush font style from [Google Fonts](https://fonts.google.com/specimen/Caveat+Brush/tester?preview.text=TIC%20TAC%20TOE.%20X%20O&preview.text_type=custom&query=cavea). Playful and close to handwriting style of this font suits this game very well. Font is used both in text and in game symbols.
+
+![](/assets/images/readme_images/font_big.png)
 
 
-
-
-
-
-- Fall back font in both cases is Sans-serif.
+- Fall back font is cursive, sans-serif.
 
 
 ## Wireframe
