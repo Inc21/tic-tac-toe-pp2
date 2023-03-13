@@ -228,11 +228,10 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 | Click on linkedIn icon (Third from left) | Open creators linkedInd page. Page opens in a new window | Working as expected | ![](/assets/images/readme_images/linkedin_small.png) |
 
 
-### Confirmation and 404-page testing.
+### 404-page testing.
 | Action | Expected Result | Actual Result | Image |
 |---|---|---|---|
-| on 'Confirmation Page' click anywhere on the big red line of text 'Click here to go back to the home page' | Site to load 'Home Page' | Working as expected |  |
-| on '404 Page' click anywhere on the big red line of text 'Click here to go back to the home page' | Site to load 'Home Page' | Working as expected | ![](/assets/readme_images/404_message.png) |
+| on 404.html Page click anywhere on the text "Click here to go back to the home page" | Main game page or "Home" page reloads | Working as expected | ![](/assets/images/readme_images/404_page_small.png) |
 
 
 ### jsHint Testing
