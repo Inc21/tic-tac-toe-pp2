@@ -30,6 +30,12 @@ The link to the live website can be found [here.](https://inc21.github.io/tic-ta
 - As a site owner, I want to make it very easy for a user to pass away time, sitting on train or a bus or waiting for something etc.
 
 # Design 
+
+
+## Look and feel
+  - Main background images for this game were chosen to give game very familiar to most people chalk and blackboard feel. Although white text on green background was not most visible, added just a slight text shadow. This make text pop of the screen, adds more contrast and is now very easily readable.  
+
+
 ## Colour
 Colour's for this game are are picked very close to background images and are really fallback in case pictures fail to load. Slightly off-white #F5F5F5 is used for all the text and game symbols to give game blackboard and and chalk feel.
 
@@ -145,11 +151,8 @@ __The Error 404 Page__
 ### Features Left to Implement
 
 - While developing this game I discovered many interesting history and facts about tic tac toe. It would be great to have some of it displayed on the site.
+- Add more levels of difficulty. At the moment computer is very smart, best possible outcome is draw. It would be nice to dumb it down a little. 
 - Given enough time and knowhow, would like to add more game modes. Tic tac toe is quite easy game to master but there is many more challenging variations out there. For example [Misère](https://en.wikipedia.org/wiki/Mis%C3%A8re), [Wild tic-tac-toe](https://en.wikipedia.org/wiki/Wild_tic-tac-toe), [Number Scrabble](https://en.wikipedia.org/wiki/Number_Scrabble) and many more. 
-
-
-## Look and feel
-  - some text. 
 
 
 ## Testing 
@@ -217,19 +220,32 @@ Also made sure that the website is clear, easy to use and valuable for the user.
 </p>
 
 
-- Google Lighthouse. Testing was performed in private browsing mode.
-<br>
-<img align="left" width="400" height="" src="">
-<br clear="left"/>
+__Google Lighthouse testing__ 
+- Testing was performed in private browsing mode.
+
+
+Desktop
+
+
+![](/assets/images/readme_images/lighthouse_desktop.png)
+- Reason for slightly lower performance score on desktop mode is mostly due to background image rendering.
+
+
+Mobile
+
+
+![](/assets/images/readme_images/lighthouse_mobile.png)
+
 
 ## Interesting bug or problems.
-  - Some text.
-  - Some text.
-  - Some text.
+  - This whole project has been one interesting learning curve.
+  - Was suggested by my mentor to display some error message when the user did not make a selection. It took many many hours to figure out how to do this. There is two sections to the options and two buttons each. My challenge was to figure out how to display correct message when any of the button is selected or not selected.
+  - As recommended by one of my class mates on slack. Computer made it's move too quick. After bit of research and a lot of trial and error managed to add small random delay to computers responses. Using math.random function computer now has 0 - 1 second delay. It makes the game look like computer thinks for a moment before move is made.
+  - Wanted to make this game more accessible. Decided to make the game so that the user can navigate and play with keyboard only. After spending more hours at this I'm very happy with the final outcome. Now everything, including all individual boxes are selectable and clickable using keyboard only and have very clear focus around them.
 
 ## Unfixed Bugs
 
-After rigorous testing with various online tools and my limited testing with different devices and browsers, all known warnings and errors returned were rectified.
+After rigorous testing with various online tools and my own limited testing with different devices and browsers, all known warnings and errors returned were rectified.
 
 ## Deployment
 
@@ -249,8 +265,8 @@ The live link can be found here - https://inc21.github.io/tic-tac-toe-pp2/
 The steps to deploy are as follows:
   - On my [GitHub](https://github.com/Inc21) profile page, top centre of the screen click on repositories.
   - Click on
-  - In the blarney_cc_pp1 repository, click on the 'Code' button.
-  - Menu that opens copy to clipboard: 
+  - In the tic-tac-toe-pp2 repository, click on the 'Code' button.
+  - Menu that opens make sure you are in "local" tab, copy the link in "HTTPS". 
   - on a Windows machine, open the command prompt (press windows+R to open the "Run" box. Type "cmd" on then click ok).
   - In cmd type "git clone" and paste the link you copied earlier (ctrl+V). Example: git clone 
 
@@ -259,13 +275,22 @@ The steps to deploy are as follows:
   - Click on the 'Fork' button on the top right of the screen
   - On the 'Create a new fork' page you are given the option to rename that repository and then click on the green 'Create fork' button at the bottom of the form.
 
-# Credits 
 
-- Some text.
 ## Content 
 
-- Some text.
+- Game rules and other content can be found on [Tic-Tac-Toe Wikipedia page](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 ## Media
 
-- Some text.
+
+Royalty free images were taken from [Pexels](https://www.pexels.com/)
+- Background image (green board) - [green board](https://www.pexels.com/photo/person-holding-white-chalk-625219/)
+- footer background (wood) -  [wood](https://www.pexels.com/photo/brown-wooden-surface-139306/)
+
+
+# Credits 
+Would like to say thanks to all for the support throughout the project.
+- [Code Institute](https://codeinstitute.net/ie/) for pointing me to this interesting direction.
+- [Slack community](https://slack.com/intl/en-ie/) and my classmates for tips and trick and entertainment.
+- YouTube user [Code Explained](https://www.youtube.com/@CodeExplained) who's explanations really suited me and he made things much clearer for me.
+- My mentor who is continuously very supportive and knowledgeable.

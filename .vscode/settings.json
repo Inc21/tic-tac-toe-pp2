@@ -25,7 +25,9 @@
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify",
    "cSpell.words": [
-      "lightsteelblue"
+      "lightsteelblue",
+      "Misère",
+      "Pexels"
    ],
    "[javascript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
