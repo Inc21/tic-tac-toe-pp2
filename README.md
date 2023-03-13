@@ -221,12 +221,11 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 
 
 ### Footer at the bottom of the page and social media links.
-| Action | Expected Result | Actual Result |
-|---|---|---|
-| Click on Facebook icon (first from left) | Open Blarney CC Facebook page in new window | Working as expected |
-| Click on Twitter icon (second from left) | Open Blarney CC twitter page in new window | Working as expected |
-| Click on Instagram icon (Third from left) | Open Blarney CC Instagram page in new window | Working as expected |
-| Click on strava icon (first from left) | Open Blarney CC Strava page in new window | Working as expected |
+| Action | Expected Result | Actual Result | Image |
+|---|---|---|---|
+| Click on Wikipedia icon (first from left) | Open Tic-Tac-Toe Wikipedia page. Page opens in a new window | Working as expected | ![](/assets/images/readme_images/wikipedia_small.png)
+| Click on GitHub icon (second from left) | Open game authors GitHub page. Page opens in a new window | Working as expected | ![](/assets/images/readme_images/github_small.png) |
+| Click on linkedIn icon (Third from left) | Open creators linkedInd page. Page opens in a new window | Working as expected | ![](/assets/images/readme_images/linkedin_small.png) |
 
 
 ### Confirmation and 404-page testing.
