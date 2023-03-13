@@ -20,8 +20,7 @@ The link to the live website can be found [here.](https://inc21.github.io/tic-ta
 - I want to see clear rules and/or instructions for the game.
 - I want to be able to play this game regardless of my device screen size, power or network speed.
 - I want the site to visually pleasing and have good color contrast.
-- I want to see clear confirmation who’s turn it is.
-- I want to be able to easily keep  win/lose score.
+
 
 ### Returning user who is familiar with Tic-Tac-Toe game.
 
@@ -166,9 +165,30 @@ __The Error 404 Page__
 This website was tested on as many different devices as I was able to find. Including a Dell Windows 10 laptop and desktop pc. Using Google Chrome, Microsoft Edge and Mozilla Firefox browsers. Also iPads 6th and 10th generation, iPhone SE, iPhone 12 and iPhone 13. Also used a program called [Grammarly](https://www.grammarly.com/) to check for any spelling or typing errors. Detailed actions are listed below. Additionally conducted Google lighthouse, jsHint and W3C validator testing, results for them are below.
 Made sure that the website is clear and clean looking and easy to use and valuable for the user.
 
+
+### User Stories Testing
+
+
+| __Expectation__ | __Result__ | __Images__ |
+|----|----|----|
+| I want to play a game that is fun and easy to master within seconds. | Not many games easier to master than tic-tac-toe. Although can't really test the fun element but I have tested it on my teenage daughter and she got hang of it within game or two  |  |
+| I want to see clear rules and/or instructions for the game. | Clear "show Rules" button always displayed on the screen | ![](/assets/images/readme_images/show_rules_small.png) |
+| I want to be able to play this game regardless of my device screen size, power or network speed. | Game tested with Google inspect tool. Using iPhone SE and throttled down to lowest available setting. Some minor delay in click responses as expected but still very playable. | ![](/assets/images/readme_images/google_low_mobile_small.png) |
+| I want the site to visually pleasing and have good color contrast. | Adding black text shadow to on screen text makes very easy on users eyes as been tested my friends and classmates on Slack |  |
+| As a returning user, I would like to find a classic game that I have played many times before. | Tic-Tac-Toe is as classic as they get and this version has only original rules and game modes.  |  |
+| As a returning user, I expect all game controls to be familiar to me. | Game is played mouse and single mouse button click. As an option game can be navigated and played with using keyboard Tab and Enter.  |  |
+| As a returning user, I would like to see external links in case I want to learn more about Tic-Tac-Toe. | Game has a footer at the bottom with links that will open in a new window. One of them is Wikipedia where everything about the game can be learned. | ![](/assets/images/readme_images/footer_small.png) |
+| As a site owner, I want to provide users with well loved and fun game. |  | ![](/assets/images/readme_images/game_play_small.png) |
+| As a site owner, I would like to tell users about the history of the game and all the different variants. | All the history and game variants are well documented on tic-tac-toe Wikipedia page. | ![](/assets/images/readme_images/wikipedia_small.png) |
+| As a site owner, I want to make it very easy for a user to pass away time, sitting on train or a bus or waiting for something etc. | Game has no large images or complicated content, perfect for areas with lower network speeds. |  |
+
+
+
+
 ### Link testing
 
-| Action | Expected Result | Actual Result |
+
+| __Action__ | __Expected Result__ | __Actual Result__ |
 |---|---|---|
 | Click on website url: [https://inc21.github.io/tic-tac-toe-pp2/](https://inc21.github.io/tic-tac-toe-pp2/) | Open 'Home Page' of the website | Working as expected |
 
@@ -176,13 +196,13 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 ### Header text link testing.
 
 
-| Action | Expected Result | Actual Result |
+| __Action__ | __Expected Result__ | __Actual Result__ |
 |---|---|---|
 | Click on the header text "Tic-Tac-Toe". | Reload page or move to 'Home Page' | Working as expected |
 
 
 ### Options area testing.
-| Action | Expected Result | Actual Result | Image |
+| __Action__ | __Expected Result__ | __Actual Result__ | __Image__ |
 |---|---|---|---|
 | User clicks on "play" button without selecting any option | Required opponent options turn red and message "PLEASE CHOOSE YOUR OPPONENT" with red background is displayed. | Working as expected | ![](/assets/images/readme_images/options_area_no_opponent_260px.png) |
 | User selects opponent | Red message disappears and flashing arrow is displayed. | Working as expected | ![](/assets/images/readme_images/options_area_computer.png) |
@@ -192,7 +212,7 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 
 
 ### Game area testing.
-| Action (Opponent: Computer, Symbol: X) | Expected Result | Actual Result | Image |
+| __Action (Opponent: Computer, Symbol: X__) | __Expected Result__ | __Actual Result__ | __Image__ |
 |---|---|---|---|
 | Blank game board loads and the user always has to make the first move. |  | Working as expected | ![](/assets/images/readme_images/game_board_small.png) |
 | The user clicks on any of the nine game squares | Square is marked with chosen symbol and computer makes it's move | Working as expected | ![](/assets/images/readme_images/box0_comp4.png) |
@@ -203,7 +223,7 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 | __NB: It's not possible to win a game with computer__ | | Computer is too smart. | |
 
 
-| Action (Opponent: Friend, Symbol: X) | Expected Result | Actual Result | Image |
+| __Action (Opponent: Friend, Symbol: X__) | __Expected Result__ | __Actual Result__ | __Image__ |
 |---|---|---|---|
 | Blank game board loads and the user always has to make the first move. |  | Working as expected | ![](/assets/images/readme_images/game_board_small.png) |
 | The user clicks on any of the nine game squares | Square is marked with chosen symbol and when friend clicks on one of the other remaining square, it's marked with other symbol  | Working as expected | ![](/assets/images/readme_images/box6_comp5.png) |
@@ -213,7 +233,7 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 
 
 ### Rules area testing.
-| Action | Expected Result | Actual Result | Image |
+| __Action__ | __Expected Result__ | __Actual Result__ | __Image__ |
 |---|---|---|---|
 | In any stage of the game, when the user clicks on "Show Rules" button | Open game rules full screen window. | Working as expected | ![](/assets/images/readme_images/show_rules_small.png) ![](/assets/images/readme_images/rules_small.png)|
 | Once game rules are open button label text changes to "Hide Rules" | Button text changes but position does not and it is only button available for the user | Working as expected | ![](/assets/images/readme_images/hide_rules_small.png) |
@@ -221,7 +241,7 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 
 
 ### Footer at the bottom of the page and social media links.
-| Action | Expected Result | Actual Result | Image |
+| __Action__ | __Expected Result__ | __Actual Result__ | __Image__ |
 |---|---|---|---|
 | Click on Wikipedia icon (first from left) | Open Tic-Tac-Toe Wikipedia page. Page opens in a new window | Working as expected | ![](/assets/images/readme_images/wikipedia_small.png)
 | Click on GitHub icon (second from left) | Open game authors GitHub page. Page opens in a new window | Working as expected | ![](/assets/images/readme_images/github_small.png) |
@@ -229,7 +249,7 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 
 
 ### 404-page testing.
-| Action | Expected Result | Actual Result | Image |
+| __Action__ | __Expected Result__ | __Actual Result__ | __Image__ |
 |---|---|---|---|
 | on 404.html Page click anywhere on the text "Click here to go back to the home page" | Main game page or "Home" page reloads | Working as expected | ![](/assets/images/readme_images/404_page_small.png) |
 
