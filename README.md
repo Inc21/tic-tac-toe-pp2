@@ -157,7 +157,7 @@ __The Error 404 Page__
 
 ## Testing 
 
-This website was tested on as many different devices as I was able to find. Including a Dell laptop and desktop pc, iPads 6th and 10th generation, and iPhone SE, iPhone 12 and iPhone 13. Also used a program called [Grammarly](https://www.grammarly.com/) to check for any spelling or typing errors. Detailed actions are listed below. Additionally conducted Google lighthouse and W3C validator testing, results for them are below.
+This website was tested on as many different devices as I was able to find. Including a Dell Windows 10 laptop and desktop pc, iPads 6th and 10th generation, and iPhone SE, iPhone 12 and iPhone 13. Also used a program called [Grammarly](https://www.grammarly.com/) to check for any spelling or typing errors. Detailed actions are listed below. Additionally conducted Google lighthouse, jsHint and W3C validator testing, results for them are below.
 Also made sure that the website is clear, easy to use and valuable for the user.
 
 ## Link testing
@@ -199,6 +199,35 @@ Also made sure that the website is clear, easy to use and valuable for the user.
 - This website was created with only two main colors and with no big images. This makes the page very easy on the eyes of the end-user and quick to load.
 
 - Also used Google dev tools to test responsiveness on smaller screens and with throttling on for low-end and mid-tier mobiles. The website was able to load with no considerable page loading times even on low-end mobile.
+
+### jsHint Testing
+
+
+Testing with [jsHint](https://jshint.com/)
+
+Very new to JavaScript and jsHint and could not figure out a way to test multiple javaScript files connected to the same website. Having JavaScript in three separate files made it for manageable for me and also makes it clearer for a future maintainer.
+
+
+- rules.js
+- jsHint reporting that there is one unused variable. showHide() is a function that is called when user clicks on "show rules" button
+
+
+![](/assets/images/readme_images/jshint_rules.png)
+
+
+- options.js
+- Missing '()' invoking a constructor - adding () will brake the game. Init is game initializing function that is called in main.js. gameOverElement is called in main.js after game is completed
+
+
+![](/assets/images/readme_images/jshint_options.png)
+
+
+- main.js
+- Had trouble with jsHint loading this file. It would only load when I delete first line of the code making fallowing warnings somewhat questionable.
+
+
+![](/assets/images/readme_images/jshint_main.png)
+
 
 ### Validator Testing 
 

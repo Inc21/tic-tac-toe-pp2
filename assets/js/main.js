@@ -206,9 +206,7 @@ function init(player, OPPONENT) {
     // show game over window
     function showGameOver(player) {
         let message =
-            player == '<i class="fa-regular fa-face-frown"></i>'
-                ? "It's a draw"
-                : "<i class='fa-solid fa-trophy'></i> The Winner is";
+            player == '<i class="fa-regular fa-face-frown"></i>' ? "It's a draw" : "<i class='fa-solid fa-trophy'></i> The Winner is";
 
         gameOverElement.innerHTML = `
         <h1>${message}</h1>
