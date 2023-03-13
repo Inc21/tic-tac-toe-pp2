@@ -1,12 +1,15 @@
 # Tic Tac Toe
 
 Tic-tac-toe in its purest form is well known and loved game. There is not too many people in the world who have not played this game at any point in their past.  
- Usually played with paper and pencil between two players. Game is played on three by three grid with X or O.  The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. It is a solved game, with a forced draw assuming best play from both players. You can play this game on any network connected device, mobile phones to large desktop, this game is fully responsive. Also has option to play against  the computer if no friend is available at the time.   
+ Usually played with paper and pencil between two players. Game is played on three by three grid with X or O.  The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. It is a solved game, with a forced draw assuming best play from both players. You can play this game on any network connected device, mobile phones to large desktop, this game is fully responsive. Also has option to play against  the computer if no friend is available at the time.   
 Good luck!
+
 
 The link to the live website can be found [here.](https://inc21.github.io/tic-tac-toe-pp2/)
 
+
 ![Image to show page responsiveness on smaller screens.](/assets/images/readme_images/responsivness_mockup.png)
+
 
 # User Stories
 

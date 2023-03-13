@@ -5,7 +5,8 @@
 }
 
 body {
-    background: url(../images/green_board.webp) no-repeat center center fixed;
+    background: url(../images/green_board.webp);
+    image-rendering: optimizeQuality;
     background-color: rgb(84, 122, 135);
     background-size: cover;
     font-family: 'Caveat Brush', cursive, sans-serif;
