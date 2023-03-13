@@ -213,12 +213,11 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 
 
 ### Rules area testing.
-| Action | Expected Result | Actual Result |
-|---|---|---|
-| Click on Facebook icon (first from left) | Open Blarney CC Facebook page in new window | Working as expected |
-| Click on Twitter icon (second from left) | Open Blarney CC twitter page in new window | Working as expected |
-| Click on Instagram icon (Third from left) | Open Blarney CC Instagram page in new window | Working as expected |
-| Click on strava icon (first from left) | Open Blarney CC Strava page in new window | Working as expected |
+| Action | Expected Result | Actual Result | Image |
+|---|---|---|---|
+| In any stage of the game, when the user clicks on "Show Rules" button | Open game rules full screen window. | Working as expected | ![](/assets/images/readme_images/show_rules_small.png) ![](/assets/images/readme_images/rules_small.png)|
+| Once game rules are open button label text changes to "Hide Rules" | Button text changes but position does not and it is only button available for the user | Working as expected | ![](/assets/images/readme_images/hide_rules_small.png) |
+| The user clicks on "Hide Rules" button | Rules window closes revealing game in a previous state | Working as expected | ![](/assets/images/readme_images/box0_comp4.png) |
 
 
 ### Footer at the bottom of the page and social media links.
