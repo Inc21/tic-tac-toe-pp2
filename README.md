@@ -1,7 +1,8 @@
 # Tic Tac Toe
 
 Tic-tac-toe in its purest form is well known and loved game. There is not too many people in the world who have not played this game at any point in their past.  
- Usually played with paper and pencil between two players. Game is played on three by three grid with X or O.  The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. It is a solved game, with a forced draw assuming best play from both players. You can play this game on any network connected device, mobile phones to large desktop, this game is fully responsive. Also has option to play against  the computer if no friend is available at the time.   
+ Usually played with paper and pencil between two players. Game is played on three by three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. It is a solved game, with a forced draw assuming best play from both players. You can play this game on any network connected device, mobile phones to large desktop, this game is fully responsive. Also has option to play against  the computer if no friend is available at the time. 
+
 Good luck!
 
 
@@ -162,22 +163,35 @@ __The Error 404 Page__
 
 ## Testing 
 
-This website was tested on as many different devices as I was able to find. Including a Dell Windows 10 laptop and desktop pc, iPads 6th and 10th generation, and iPhone SE, iPhone 12 and iPhone 13. Also used a program called [Grammarly](https://www.grammarly.com/) to check for any spelling or typing errors. Detailed actions are listed below. Additionally conducted Google lighthouse, jsHint and W3C validator testing, results for them are below.
-Also made sure that the website is clear, easy to use and valuable for the user.
+This website was tested on as many different devices as I was able to find. Including a Dell Windows 10 laptop and desktop pc. Using Google Chrome, Microsoft Edge and Mozilla Firefox browsers. Also iPads 6th and 10th generation, iPhone SE, iPhone 12 and iPhone 13. Also used a program called [Grammarly](https://www.grammarly.com/) to check for any spelling or typing errors. Detailed actions are listed below. Additionally conducted Google lighthouse, jsHint and W3C validator testing, results for them are below.
+Made sure that the website is clear and clean looking and easy to use and valuable for the user.
 
-## Link testing
+### Link testing
+
 | Action | Expected Result | Actual Result |
 |---|---|---|
-| Click on website url: [https://inc2/](https://in/) | Open 'Home Page' of the website | Working as expected |
-- ### Header and navigation bar.
+| Click on website url: [https://inc21.github.io/tic-tac-toe-pp2/](https://inc21.github.io/tic-tac-toe-pp2/) | Open 'Home Page' of the website | Working as expected |
+
+
+### Header text link testing.
+
+
 | Action | Expected Result | Actual Result |
 |---|---|---|
-| Click on the logo image in the header section. | Reload or move to 'Home Page' | Working as expected |
-| Click on navigation bar 'Home' button | Reload or move to 'Home Page' | Working as expected |
-|  Click on navigation bar 'Gallery' button | Load 'Gallery Page' | Working as expected |
-|  Click on navigation bar 'Contact' button | Load 'Contact Page' | Working as expected |
-|  Click on 'contact' in 'About' section | Load 'Contact Page' | Working as expected |
-- ### Footer at the bottom of the page and social media links.
+| Click on the header text "Tic-Tac-Toe". | Reload page or move to 'Home Page' | Working as expected |
+
+
+### Options area testing.
+| Action | Expected Result | Actual Result | Image |
+|---|---|---|---|
+| User clicks on "play" button without selecting any option | Required opponent options turn red and message "PLEASE CHOOSE YOUR OPPONENT" with red background is displayed. | Working as expected | ![](/assets/images/readme_images/options_area_no_opponent_260px.png) |
+| User selects opponent | Red message disappears and flashing arrow is displayed. | Working as expected | ![](/assets/images/readme_images/options_area_computer.png) |
+| User has opponent selected but no symbol then clicks on "play" button | Required symbol options turn red and message "PLEASE CHOOSE YOUR SYMBOL" with red background is displayed. | Working as expected | ![](/assets/images/readme_images/options_area_no_symbol_260px.png) | 
+| User selects symbol | Red message disappears and flashing arrow is displayed. | Working as expected | ![](/assets/images/readme_images/options_area_all.png) |
+| Once user has made both selections and clicks play "button" | Main game board is loaded. | Working as expected. | ![](/assets/images/readme_images/game_board_small.png) |
+
+
+### Game area testing.
 | Action | Expected Result | Actual Result |
 |---|---|---|
 | Click on Facebook icon (first from left) | Open Blarney CC Facebook page in new window | Working as expected |
@@ -186,24 +200,30 @@ Also made sure that the website is clear, easy to use and valuable for the user.
 | Click on strava icon (first from left) | Open Blarney CC Strava page in new window | Working as expected |
 
 
-- ### Form testing, Contact page.
-| Action | Expected Result | Actual Result | Image |
-|---|---|---|---|
-| on the 'Contact Page' press the 'Submit' button without filling out the form. | Browser to display a warning on the line where user input is required | Working as expected | ![](/assets/readme_images/Form_subit_blank.png) |
-| on the 'Contact Page' in the email input field enter some other text and hit the 'Submit' button | Browser to display a warning on the email input field about missing @ symbol| Working as expected | ![](/assets/readme_images/Form_subit_email.png) |
-| Form filled with the marked required text. | Open the 'Confirmation Page' to confirm with the user about the successful form submission. | Working as expected | ![](/assets/readme_images/Form_subit_full.png) ![](/assets/readme_images/success_page_load.png) |
+### Rules area testing.
+| Action | Expected Result | Actual Result |
+|---|---|---|
+| Click on Facebook icon (first from left) | Open Blarney CC Facebook page in new window | Working as expected |
+| Click on Twitter icon (second from left) | Open Blarney CC twitter page in new window | Working as expected |
+| Click on Instagram icon (Third from left) | Open Blarney CC Instagram page in new window | Working as expected |
+| Click on strava icon (first from left) | Open Blarney CC Strava page in new window | Working as expected |
 
 
-- ### Confirmation and 404-page testing.
+### Footer at the bottom of the page and social media links.
+| Action | Expected Result | Actual Result |
+|---|---|---|
+| Click on Facebook icon (first from left) | Open Blarney CC Facebook page in new window | Working as expected |
+| Click on Twitter icon (second from left) | Open Blarney CC twitter page in new window | Working as expected |
+| Click on Instagram icon (Third from left) | Open Blarney CC Instagram page in new window | Working as expected |
+| Click on strava icon (first from left) | Open Blarney CC Strava page in new window | Working as expected |
+
+
+### Confirmation and 404-page testing.
 | Action | Expected Result | Actual Result | Image |
 |---|---|---|---|
 | on 'Confirmation Page' click anywhere on the big red line of text 'Click here to go back to the home page' | Site to load 'Home Page' | Working as expected |  |
 | on '404 Page' click anywhere on the big red line of text 'Click here to go back to the home page' | Site to load 'Home Page' | Working as expected | ![](/assets/readme_images/404_message.png) |
 
-
-- This website was created with only two main colors and with no big images. This makes the page very easy on the eyes of the end-user and quick to load.
-
-- Also used Google dev tools to test responsiveness on smaller screens and with throttling on for low-end and mid-tier mobiles. The website was able to load with no considerable page loading times even on low-end mobile.
 
 ### jsHint Testing
 
