@@ -192,12 +192,24 @@ Made sure that the website is clear and clean looking and easy to use and valuab
 
 
 ### Game area testing.
-| Action | Expected Result | Actual Result |
-|---|---|---|
-| Click on Facebook icon (first from left) | Open Blarney CC Facebook page in new window | Working as expected |
-| Click on Twitter icon (second from left) | Open Blarney CC twitter page in new window | Working as expected |
-| Click on Instagram icon (Third from left) | Open Blarney CC Instagram page in new window | Working as expected |
-| Click on strava icon (first from left) | Open Blarney CC Strava page in new window | Working as expected |
+| Action (Opponent: Computer, Symbol: X) | Expected Result | Actual Result | Image |
+|---|---|---|---|
+| Blank game board loads and the user always has to make the first move. |  | Working as expected | ![](/assets/images/readme_images/game_board_small.png) |
+| The user clicks on any of the nine game squares | Square is marked with chosen symbol and computer makes it's move | Working as expected | ![](/assets/images/readme_images/box0_comp4.png) |
+| The user tries to click on the square that is already played | Nothing happens, box un-clickable. | Working as expected | ![](/assets/images/readme_images/box0_comp4.png) |
+| When all nine squares are filled and the user or computer did not get three in a row | Display game over window with "It's a Draw" text and "Play Again" button | Working as expected | ![](/assets/images/readme_images/draw_small.png) |
+| The user clicks on "Play Again" button | Page reloads and opens back to the options area | Working as expected | ![](/assets/images/readme_images/options_area_260px.png) |
+| When computer manages to get three of it's symbols in a row. | Display game over window with "The Winner Is" text and computer's current symbol. | Working as expected | ![](/assets/images/readme_images/winner_o_small.png) |
+| __NB: It's not possible to win a game with computer__ | | Computer is too smart. | |
+
+
+| Action (Opponent: Friend, Symbol: X) | Expected Result | Actual Result | Image |
+|---|---|---|---|
+| Blank game board loads and the user always has to make the first move. |  | Working as expected | ![](/assets/images/readme_images/game_board_small.png) |
+| The user clicks on any of the nine game squares | Square is marked with chosen symbol and when friend clicks on one of the other remaining square, it's marked with other symbol  | Working as expected | ![](/assets/images/readme_images/box6_comp5.png) |
+| When all nine squares are filled and the user or a friend did not get three in a row | Display game over window with "It's a Draw" text and "Play Again" button | Working as expected | ![](/assets/images/readme_images/draw_small.png) |
+| The user clicks on "Play Again" button | Page reloads and opens back to the options area | Working as expected | ![](/assets/images/readme_images/options_area_260px.png) |
+| The user or a friend manage to get three of their symbols in a row |  Display game over window with "The Winner Is" text and current players symbol and "Play Again" button | Working as expected | ![](/assets/images/readme_images/winner_x_small.png) |
 
 
 ### Rules area testing.
