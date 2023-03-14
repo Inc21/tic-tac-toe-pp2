@@ -311,7 +311,6 @@ Desktop
 
 
 ![](/assets/images/readme_images/lighthouse_desktop.png)
-- Reason for the slightly lower performance score on desktop mode is mostly due to background image rendering.
 
 
 Mobile
