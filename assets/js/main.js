@@ -211,7 +211,7 @@ function init(player, OPPONENT) {
         gameOverElement.innerHTML = `
         <h1>${message}</h1>
         <h2>${player}</h2>
-        <button class="play woodButton" onclick="location.reload()">Play Again</button>
+        <button aria-label="Play Again." class="play woodButton" onclick="location.reload()">Play Again</button>
         `;
 
         gameOverElement.classList.remove("hide");
